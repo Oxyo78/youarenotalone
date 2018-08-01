@@ -1,0 +1,26 @@
+/* Title animation */
+
+#titleslide {
+    overflow: hidden;
+    width: 290px;
+    margin: auto;
+}
+
+#slideword {
+    display: inline-block;
+    position: relative;
+    white-space: pre;
+    left: 0;
+    -webkit-animation: move 11s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-delay: 1s;
+}
+
+@keyframes move {
+    0%{left:0px;}
+    20%{left:-490px;}
+    40%{left:-2703px;}
+    45%{left:-2698px;}
+    60%{left:-1520px;}
+    70%{left:-2020px;}
+}
