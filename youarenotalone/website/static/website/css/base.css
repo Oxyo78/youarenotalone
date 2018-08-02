@@ -1,0 +1,36 @@
+/* Footer css */
+
+#footerpage {
+    padding:10px ! important;
+    margin: 20px;
+}
+
+@media (min-width: 768px) {
+    .footy {
+        max-width: 50%;
+        padding: 0;
+    }
+  }
+
+/* Alert */
+.alert {
+    margin-top: 70px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Modal form */
+.modalButton {
+    margin: auto;
+}
+
+.modalButton button {
+    margin: 10px;
+}
+
+.modal-footer a {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
