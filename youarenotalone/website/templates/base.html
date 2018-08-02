@@ -41,16 +41,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+            {% if user.is_authenticated %}
             <li class="nav-item">
-              <!-- Tester si page principale  -->
+                <p class="userName"><strong>Bienvenue {{ userName }}</strong></p> 
+            </li>
+            {% endif %}
+            <li class="nav-item">
+              <!-- Tester si page principale pour bouton News -->
               <a class="nav-link js-scroll-trigger" href="#">News</a> 
             </li>
             {% if not user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#connexionModal">Connexion</a>
+              <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#loginModal">Connexion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#userModal">inscription</a>
+              <a class="nav-link js-scroll-trigger" data-toggle="modal" data-target="#subscribeModal">inscription</a>
             </li>
             {% else %}
               <li class="nav-item">
@@ -66,13 +71,19 @@
       {% if error %}
       <div class="alert alert-warning fixed-top text-center">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>Utilisateur inconnu ou mauvais de mot de passe.</strong>
+          <strong>{{ errorText}}</strong>
+        </div>
+      {% endif %}
+      {% if loginSuccess %}
+      <div class="alert alert-success fixed-top text-center">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Bienvenue !</strong>
         </div>
       {% endif %}
     </nav>
 
     <!-- Modal connexion -->
-    <div class="modal fade" id="connexionModal" role="dialog">
+    <div class="modal fade" id="loginModal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -85,19 +96,40 @@
                   <div class="row">
                     <div class="modalButton">
                       <button type="submit" class="btn btn-default">Se connecter</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Quitter</button>
                     </div>
                   </div>
               </form>
           </div>
           <div class="modal-footer">
-            <a data-toggle="modal" data-target="#subscribeModal" href="#">inscription</a>
+            <a id="subscribeLink" data-toggle="modal" data-target="#subscribeModal" href="#">inscription</a>
           </div>
         </div>        
       </div>
     </div>
-
+    
     <!-- Modal subscribe -->
+    <div class="modal fade" id="subscribeModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Inscription</h4>
+          </div>
+          <div class="modal-body">
+              <form class="subscribeForm" method="post">
+                  {% csrf_token %}
+                  {{ subscribeForm.as_p }}
+                  <div class="row">
+                    <div class="modalButton">
+                      <button type="submit" class="btn btn-default">Commencer</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Quitter</button>
+                    </div>
+                  </div>
+              </form>
+          </div>
+        </div>        
+      </div>
+    </div>
 
     {% block content %}{% endblock %}
 
@@ -128,6 +160,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="{% static 'website/js/creative.min.js' %}"></script>
+    <script src="{% static 'website/js/base.js' %}"></script>
     {% block script %}{% endblock %}
   </body>
 

@@ -10,40 +10,36 @@ from django.db.models.query import QuerySet
 def index(request):
     """ Home page render """
     error = False
+    errorText = ''
+
+    # Get the username
+    userName = request.user
 
     # User connexion
     if request.method == "POST":
-        form = loginUser(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
+        logForm = loginUser(request.POST)
+        if logForm.is_valid():
+            username = logForm.cleaned_data['username']
+            password = logForm.cleaned_data['password']
             authenticate_user = authenticate(username=username, password=password)
             if authenticate_user:
                 login(request, authenticate_user)
-                return redirect(reverse(index))
+                loginSuccess = True
+                error = False
+                return render(request, 'website/templates/index.html', locals())
             else:
+                errorText = 'Utilisateur inconnu ou mauvais de mot de passe'
                 error = True
                 loginForm = loginUser()
-    else:
-        loginForm = loginUser()
-        error = False
-
-    return render(request, 'website/templates/index.html', locals())
-
-
-def subscribe(request):
-    """ Create User account """
-    errorUsername = False
-    errorPassword = False
-    errorForm = False
-
-    if request.method == "POST":
-        form = createUser(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
-            password2 = form.cleaned_data['password2']
+                subscribeForm = createUser()
+        
+        # User subscribe modal
+        subForm = createUser(request.POST)
+        if subForm.is_valid():
+            username = subForm.cleaned_data['username']
+            email = subForm.cleaned_data['email']
+            password = subForm.cleaned_data['password']
+            password2 = subForm.cleaned_data['password2']
             # Check if the input password is correct
             if password == password2:
                 # Check if the username doesn't already exist in the database
@@ -52,16 +48,27 @@ def subscribe(request):
                     user.save()
                     user = authenticate(username=username, password=password)
                     login(request, user)
-                    return redirect(reverse(index))
+                    loginSuccess = True
+                    error = False
+                    return render(request, 'website/templates/index.html', locals())
                 else:
-                    errorUsername = True
+                    errorText = "Nom d'utilisateur déja pris"
+                    error = True
+                    subscribeForm = createUser()
+                    loginForm = loginUser()
             else:
-                errorPassword = True
-        else:
-            errorForm = True
+                errorText = 'Les mots de passe ne correspondent pas'
+                error = True
+                subscribeForm = createUser()
+                loginForm = loginUser()
     else:
-        form = createUser()
-    return render(request, 'subscribe.html', locals())
+        error = False
+        loginSuccess = False
+        loginForm = loginUser()
+        subscribeForm = createUser()
+
+
+    return render(request, 'website/templates/index.html', locals())
 
 
 @login_required

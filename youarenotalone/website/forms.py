@@ -7,7 +7,7 @@ class loginUser(forms.Form):
         widget=forms.TextInput(
             attrs={
                 'class': 'form-control',
-                'id': 'usernameInput',
+                'id': 'usernameInputControl',
                 'value': '',
                 'placeholder': 'ex: Paul01',
             }
@@ -16,7 +16,7 @@ class loginUser(forms.Form):
         widget=forms.PasswordInput(
             attrs={
                 'class': 'form-control',
-                'id': 'passwordInput',
+                'id': 'passwordControl',
                 'value': '',
                 'placeholder': 'Mot de passe',
             }

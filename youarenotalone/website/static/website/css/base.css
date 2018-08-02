@@ -34,3 +34,20 @@
     width: 50%;
     margin: auto;
 }
+
+/* navBar */
+@media (min-width: 992px) {
+    .userName {
+        margin-top: 6.5px;
+        margin-right: 20px;
+    }
+    #mainNav.navbar-shrink .navbar-nav>li.nav-item>p.userName {
+        color: #F05F40;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav>li.nav-item>p.userName {
+        color: #F05F40;
+    }
+}
