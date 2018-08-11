@@ -21,6 +21,10 @@
 }
 
 /* Modal form */
+.modal {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
 .modalButton {
     margin: auto;
 }
