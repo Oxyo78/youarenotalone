@@ -1,0 +1,123 @@
+1534246414246	geckodriver	INFO	geckodriver 0.21.0
+1534246414252	geckodriver	INFO	Listening on 127.0.0.1:50331
+1534246415256	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.pVoagurUOV9O"
+1534246417685	Marionette	INFO	Listening on port 42567
+1534246417786	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 25107, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534248293366	geckodriver	INFO	geckodriver 0.21.0
+1534248293373	geckodriver	INFO	Listening on 127.0.0.1:49455
+1534248294379	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.buU0uL7H2I0M"
+1534248297019	Marionette	INFO	Listening on port 39049
+1534248297106	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 25947, Gecko_IOThread] WARNING: pipe error (75): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534248483875	geckodriver	INFO	geckodriver 0.21.0
+1534248483882	geckodriver	INFO	Listening on 127.0.0.1:49803
+1534248484886	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.njyeuprhEUxz"
+1534248487157	Marionette	INFO	Listening on port 41741
+1534248487225	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 26312, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534248561058	geckodriver	INFO	geckodriver 0.21.0
+1534248561066	geckodriver	INFO	Listening on 127.0.0.1:38383
+1534248562069	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Cr5pcB7vY3bJ"
+1534248564314	Marionette	INFO	Listening on port 33499
+1534248564391	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 26604, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534248698391	geckodriver	INFO	geckodriver 0.21.0
+1534248698396	geckodriver	INFO	Listening on 127.0.0.1:56903
+1534248699406	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.SdSY86s9UZHT"
+1534248702388	Marionette	INFO	Listening on port 38765
+1534248702431	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 26936, Gecko_IOThread] WARNING: pipe error (75): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534248853934	geckodriver	INFO	geckodriver 0.21.0
+1534248853941	geckodriver	INFO	Listening on 127.0.0.1:49585
+1534248854943	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.1klgCv9EFIgV"
+1534248857011	Marionette	INFO	Listening on port 40285
+1534248857081	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:55957/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+
+(/usr/lib/firefox/firefox:27360): dconf-WARNING **: 14:14:19.202: Unable to open /var/lib/flatpak/exports/share/dconf/profile/user: Permission denied
+[Parent 27255, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534248952068	geckodriver	INFO	geckodriver 0.21.0
+1534248952074	geckodriver	INFO	Listening on 127.0.0.1:41617
+1534248953078	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.o4N1quQDfcpZ"
+1534248955353	Marionette	INFO	Listening on port 44169
+1534248955422	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:44247/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+
+(/usr/lib/firefox/firefox:27686): dconf-WARNING **: 14:15:57.465: Unable to open /var/lib/flatpak/exports/share/dconf/profile/user: Permission denied
+[Parent 27588, Gecko_IOThread] WARNING: pipe error (60): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534249082163	geckodriver	INFO	geckodriver 0.21.0
+1534249082168	geckodriver	INFO	Listening on 127.0.0.1:44507
+1534249083172	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.QsUorWGJRclj"
+1534249085494	Marionette	INFO	Listening on port 44423
+1534249085592	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:48607/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48607/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 27938, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534249240604	geckodriver	INFO	geckodriver 0.21.0
+1534249240609	geckodriver	INFO	Listening on 127.0.0.1:34129
+1534249241616	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.Q1NWpySFVE5C"
+1534249243645	Marionette	INFO	Listening on port 42187
+1534249243773	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:42057/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:42057/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:42057/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 28322, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534249758161	geckodriver	INFO	geckodriver 0.21.0
+1534249758170	geckodriver	INFO	Listening on 127.0.0.1:56825
+1534249759169	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.H9c7VC4K0XAJ"
+1534249761933	Marionette	INFO	Listening on port 42385
+1534249762020	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:44315/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44315/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44315/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44315/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 29020, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534249965819	geckodriver	INFO	geckodriver 0.21.0
+1534249965824	geckodriver	INFO	Listening on 127.0.0.1:38323
+1534249966826	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.KbORrWrZxDb0"
+1534249969501	Marionette	INFO	Listening on port 41589
+1534249969582	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:49037/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:49037/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:49037/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:49037/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 29397, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534250023076	geckodriver	INFO	geckodriver 0.21.0
+1534250023084	geckodriver	INFO	Listening on 127.0.0.1:47235
+1534250024093	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.2p2mgcNy6xc5"
+1534250026786	Marionette	INFO	Listening on port 37139
+1534250026821	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:40015/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:40015/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:40015/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:40015/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:40015/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 29704, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534250062318	geckodriver	INFO	geckodriver 0.21.0
+1534250062327	geckodriver	INFO	Listening on 127.0.0.1:33795
+1534250063324	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.JGJJGK2hfS56"
+1534250066135	Marionette	INFO	Listening on port 34669
+1534250066250	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 30015, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
