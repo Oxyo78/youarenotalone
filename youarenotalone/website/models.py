@@ -1,24 +1,30 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
-# Add more information to the user
-class User_info(models.Model):
-    coordinate_lng = models.DecimalField(max_digits=10, decimal_places=7)
-    coordinate_lat = models.DecimalField(max_digits=10, decimal_places=7)
-    picture = models.ImageField()
-    user_id = models.OneToOneField(User, on_delete=models.CASCADE)
-     
-    def __str__(self):
-        return self.coordinate_lng, self.coordinate_lat
 
 # Interest table
 class Interest(models.Model):
-    interest_name = models.CharField(max_length=35, unique=True)
+    interestName = models.CharField(max_length=35, unique=True)
      
     def __str__(self):
-        return self.interest_name
+        return self.interestName
 
 
-class User_interest(models.Model):
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
-    interest_id = models.OneToOneField(Interest, on_delete=models.CASCADE)
+# Add more information to the user
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    coordinateLng = models.DecimalField(max_digits=10, decimal_places=7, null=True)
+    coordinateLat = models.DecimalField(max_digits=10, decimal_places=7, null=True)
+    interestId = models.ManyToManyField(Interest, related_name="interestUser")
+     
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.userprofile.save()

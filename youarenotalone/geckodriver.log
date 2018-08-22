@@ -121,3 +121,18 @@ JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line
 JavaScript error: http://localhost:35227/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
 [Parent 30015, Gecko_IOThread] WARNING: pipe error (76): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1534880142021	geckodriver	INFO	geckodriver 0.21.0
+1534880142030	geckodriver	INFO	Listening on 127.0.0.1:58349
+1534880143030	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.I1nTU1Furb0m"
+1534880145573	Marionette	INFO	Listening on port 44695
+1534880145682	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:43883/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:43883/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:43883/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:43883/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:43883/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:43883/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:43883/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:43883/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 5877, Gecko_IOThread] WARNING: pipe error (75): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
