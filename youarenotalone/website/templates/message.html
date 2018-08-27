@@ -1,0 +1,72 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<section class="bg-primary" id="inbox">
+    <div class="container my-auto">
+        <div class="text-uppercase">
+            <h3>Messagerie</h3>
+            {% if message_list %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Expéditeur</th>
+                        <th scope="col" class="inboxDetail">Objet</th>
+                        <th scope="col" class="inboxDetail">Recu le</th>
+                        <th scope="col" class="inboxDetail">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for message in message_list %}
+                    <tr>
+                        <td>{{ message.sender }}</td>
+                        <td class="listMessage">
+                            {% if message.new %}<strong>{% endif %} {% if message.replied %}<em>{% endif %}
+                                    <a href="{% url 'view_message' message.id %}#messageview" class="js-scroll-trigger">{{ message.subject|truncatewords:3 }} {% if message.new %}(New){% endif %}</a>
+                                    {% if message.replied %}</em>{% endif %} {% if message.new %}</strong>{% endif %}</td>
+                        <td class="listMessage">{{ message.sent_at|date:_("DATETIME_FORMAT") }}</td>
+                        <td class="listMessage"><a href="{% url 'messages_delete' message.id %}">Supprimer</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>Aucun messages</p>
+            {% endif %}
+        </div>
+    </div>
+    <br>
+    {% if messageToView %}
+    <div class="messageDetail">
+        <div class="container my-auto" id="messageview">
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>Message</h3>
+                    <dl class="message-headers">
+                        <dt>Objet:</dt>
+                        <dd><strong>{{ messageToView.subject }}</strong></dd>
+                        <dt>Expéditeur:</dt>
+                        <dd>{{ messageToView.sender }}</dd>
+                        <dt>Reçu le:</dt>
+                        <dd>{{ messageToView.sent_at|date:_("DATETIME_FORMAT")}}</dd>
+                    </dl>
+                </div>
+                <div class="col-md-5">
+                    {{ messageToView.body|linebreaksbr }}<br /><br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="replyBody">
+                        <form class="bodyForm" method="post" >
+                            {% csrf_token %}
+                            {{ bodyForm.as_p }}
+                            <button type="submit" class="btn btn-default" id="sendButton">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+{% endblock %}

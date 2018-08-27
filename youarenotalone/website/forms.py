@@ -62,3 +62,15 @@ class createUser(forms.Form):
                                        'placeholder': 'Répétez le mot de passe',
                                    }
                                ))
+
+class MessageReply(forms.Form):
+    """ Reply to message """
+    body = forms.CharField(label ="Réponse",
+                            widget=forms.Textarea(
+                            attrs={
+                                'class': 'form-control',
+                                'id': 'bodyReply',
+                                'value': '',
+                                'placeholder': 'Tapez votre réponse ici'
+                                }
+                            ))
