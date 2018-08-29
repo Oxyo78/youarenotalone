@@ -8,7 +8,7 @@ from django.db.models.query import QuerySet
 from django_messages.models import Message, inbox_count_for
 from django.utils import timezone
 from django.http import Http404
-import sys
+from .models import Interest, UserProfile
 
 def index(request):
     """ Home page render """
@@ -90,6 +90,7 @@ def logoutUser(request):
     logout(request)
     return redirect(reverse(index))
 
+
 @login_required
 def messageInbox(request):
     """ get the message list for the user """
@@ -102,6 +103,7 @@ def messageInbox(request):
         unreadMessage = None
 
     return render(request, 'website/templates/message.html', locals())
+
 
 @login_required
 def viewMessage(request, messageId):
@@ -146,3 +148,18 @@ def viewMessage(request, messageId):
 
     message_list = Message.objects.inbox_for(request.user)
     return render(request, 'website/templates/message.html', locals())
+
+
+@login_required
+def account(request):
+    """ Account page """
+    user = request.user
+
+    # Check email unread
+    unreadMessage = inbox_count_for(user)
+    if unreadMessage == 0:
+        unreadMessage = None
+
+    interestList=user.userprofile.interestId.all()
+
+    return render(request, 'website/templates/account.html', locals())
