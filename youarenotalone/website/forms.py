@@ -34,6 +34,18 @@ class createUser(forms.Form):
                                        'placeholder': 'ex: Paul01',
                                    }
                                ))
+    
+    city = forms.CharField(label="Ville",
+                            max_length=46,
+                            widget=forms.TextInput(
+                                attrs={
+                                    'class': 'form-control',
+                                    'id': 'cityInput',
+                                    'value': '',
+                                    'placeholder': 'Votre ville'
+                                }
+                            ))
+
     email = forms.CharField(label="Email",
                                max_length=30,
                                widget=forms.TextInput(
@@ -62,3 +74,15 @@ class createUser(forms.Form):
                                        'placeholder': 'Répétez le mot de passe',
                                    }
                                ))
+
+class MessageReply(forms.Form):
+    """ Reply to message """
+    body = forms.CharField(label ="Réponse",
+                            widget=forms.Textarea(
+                            attrs={
+                                'class': 'form-control',
+                                'id': 'bodyReply',
+                                'value': '',
+                                'placeholder': 'Tapez votre réponse ici'
+                                }
+                            ))

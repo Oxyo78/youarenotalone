@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<section class="bg-primary" id="account">
+    <div class="row">
+        <div class="container my-auto text-uppercase">
+            <h3>Mon compte</h3>
+            <div class="row">
+                <div class="col-md-5">
+                    <dl class="account-info">
+                        <dt>Pseudo:</dt>
+                        <dd>{{ user.username }}</dd>
+                        <dt>Prénom:</dt>
+                        <dd>{{ user.first_name }}</dd>
+                        <dt>Nom:</dt>
+                        <dd>{{ user.last_name }}</dd>
+                        <dt>Email:</dt>
+                        <dd>{{ user.email }}</dd>
+                        <dt>Dernière connexion:</dt>
+                        <dd>{{ user.last_login }}</dd>
+                    </dl>
+                </div>
+                <div class="col-md-5">
+                    <dl>
+                        <dt>Coordonnée géographique:</dt>
+                        <dd>{{ user.userprofile.coordinateLng }} / {{ user.userprofile.coordinateLat }}</dd>
+                        <dt>Intérêt:</dt>
+                        {% for interest in interestList %}
+                        <dd>{{ interest }}</dd>
+                        {% endfor %}
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

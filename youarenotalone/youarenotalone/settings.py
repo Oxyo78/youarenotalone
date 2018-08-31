@@ -37,8 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django_messages',
     'website',
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -120,3 +124,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = '/media/'
 MEDIA_URL = '/media/'
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django_messages.context_processors.inbox',
+)

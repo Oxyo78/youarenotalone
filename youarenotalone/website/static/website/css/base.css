@@ -1,8 +1,39 @@
-/* Footer css */
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
+}
 
+/* Footer css */
 #footerpage {
     padding:10px ! important;
     margin: 20px;
+}
+
+/* inbox */
+#inbox {
+    color: aliceblue;
+}
+
+#inbox a {
+    color: rgb(11, 115, 206);
+}
+
+#inbox th {
+    color: rgb(80, 69, 56);
+}
+
+@media (max-width: 425px) {
+    .table {
+        font-size: 75%;
+    }
+}
+
+/* Message detail */
+.messageDetail {
+    margin-top: 50px;
+}
+
+.messageDetail dt {
+    color: rgb(80, 69, 56);
 }
 
 @media (min-width: 768px) {

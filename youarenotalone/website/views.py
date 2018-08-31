@@ -1,19 +1,27 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .forms import loginUser, createUser
+from .forms import loginUser, createUser, MessageReply
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db.models.query import QuerySet
-
+from django_messages.models import Message, inbox_count_for
+from django.utils import timezone
+from django.http import Http404, HttpResponse
+from .models import Interest, UserProfile
 
 def index(request):
     """ Home page render """
     error = False
     errorText = ''
+    succesText = ''
 
-    # Get the username
-    userName = request.user
+    # Get the number of unread message
+    if request.user.is_authenticated:
+        userName = request.user
+        unreadMessage = inbox_count_for(userName)
+        if unreadMessage == 0:
+            unreadMessage = None
 
     # User connexion
     if request.method == "POST":
@@ -24,8 +32,13 @@ def index(request):
             authenticate_user = authenticate(username=username, password=password)
             if authenticate_user:
                 login(request, authenticate_user)
+                succesText = 'Bienvenue !'
                 loginSuccess = True
                 error = False
+                userName = request.user
+                unreadMessage = inbox_count_for(userName)
+                if unreadMessage == 0:
+                    unreadMessage = None
                 return render(request, 'website/templates/index.html', locals())
             else:
                 errorText = 'Utilisateur inconnu ou mauvais de mot de passe'
@@ -48,6 +61,7 @@ def index(request):
                     user.save()
                     user = authenticate(username=username, password=password)
                     login(request, user)
+                    succesText = 'Vous êtes connecté !'
                     loginSuccess = True
                     error = False
                     return render(request, 'website/templates/index.html', locals())
@@ -67,7 +81,6 @@ def index(request):
         loginForm = loginUser()
         subscribeForm = createUser()
 
-
     return render(request, 'website/templates/index.html', locals())
 
 
@@ -76,3 +89,78 @@ def logoutUser(request):
     """ Logout user """
     logout(request)
     return redirect(reverse(index))
+
+
+@login_required
+def messageInbox(request):
+    """ get the message list for the user """
+    message_list = Message.objects.inbox_for(request.user)
+
+    # Get the number of unread message
+    userName = request.user
+    unreadMessage = inbox_count_for(userName)
+    if unreadMessage == 0:
+        unreadMessage = None
+
+    return render(request, 'website/templates/message.html', locals())
+
+
+@login_required
+def viewMessage(request, messageId):
+    """ Return the message detail """
+    user = request.user
+    now = timezone.now()
+    messageToView = get_object_or_404(Message, id=messageId)
+    if (messageToView.sender != user) and (messageToView.recipient != user):
+        raise Http404
+    if messageToView.read_at is None and messageToView.recipient == user:
+        messageToView.read_at = now
+        messageToView.save()
+    
+    # Get the number of unread message
+    userName = request.user
+    unreadMessage = inbox_count_for(userName)
+    if unreadMessage == 0:
+        unreadMessage = None
+
+    if request.method == "POST":
+        bodyForm = MessageReply(request.POST)
+        if bodyForm.is_valid():
+            body = bodyForm.cleaned_data['body']
+            try:
+                msg = Message.objects.create(subject=messageToView.subject, body=body, sender=userName,
+                                            recipient=messageToView.sender, parent_msg=messageToView.parent_msg, sent_at=now)
+                msg.save()
+                succesText = 'Message envoyé'
+                loginSuccess = True
+            except ValueError as e:
+                print('erreur: ', e)
+            message_list = Message.objects.inbox_for(request.user)
+            return render(request, 'website/templates/message.html', locals())
+        else:
+            errorText = 'Message non envoyé'
+            error = True
+            bodyForm = MessageReply()
+    else:
+        error = False
+        loginSuccess = False
+        bodyForm = MessageReply()
+
+    message_list = Message.objects.inbox_for(request.user)
+
+    return render(request, 'website/templates/message.html', locals())
+
+
+@login_required
+def account(request):
+    """ Account page """
+    user = request.user
+
+    # Check email unread
+    unreadMessage = inbox_count_for(user)
+    if unreadMessage == 0:
+        unreadMessage = None
+
+    interestList=user.userprofile.interestId.all()
+
+    return render(request, 'website/templates/account.html', locals())
