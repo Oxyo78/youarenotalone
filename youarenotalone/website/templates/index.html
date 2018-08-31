@@ -28,7 +28,10 @@
         <h2 class="section-heading text-white">Il y a toujours quelqu'un autour de vous qui vous ressemble !</h2>
         <hr class="light my-6">
         <p class="text-faded mb-4">Vous avez un sport préféré, un hobby, un style de vie ou un projet mais vous ne connaissez personne autour de chez vous qui partage votre passion. Sur You Are Not Alone, trouvez des personnes, discuter, partagez ou réaliser ensemble une activité.</p>
-        <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Rejoindre la communauté</a>
+        {% if user.is_authenticated %}
+        {% else %}
+        <a class="btn btn-light btn-xl js-scroll-trigger" data-toggle="modal" data-target="#subscribeModal">Rejoindre la communauté</a>
+        {% endif %}
       </div>
     </div>
   </div>

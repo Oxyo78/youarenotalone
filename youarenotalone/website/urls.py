@@ -9,5 +9,5 @@ urlpatterns = [
     path('logout/', views.logoutUser, name='logout'),
     path('messages/', views.messageInbox, name='message'),
     path('messages/view/<messageId>/', views.viewMessage, name='view_message'),  
-    path('account/', views.account, name='account'),  
+    path('account/', views.account, name='account'),
 ]

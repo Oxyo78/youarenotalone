@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from django.db.models.query import QuerySet
 from django_messages.models import Message, inbox_count_for
 from django.utils import timezone
-from django.http import Http404
+from django.http import Http404, HttpResponse
 from .models import Interest, UserProfile
 
 def index(request):
@@ -147,6 +147,7 @@ def viewMessage(request, messageId):
         bodyForm = MessageReply()
 
     message_list = Message.objects.inbox_for(request.user)
+
     return render(request, 'website/templates/message.html', locals())
 
 

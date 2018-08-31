@@ -20,7 +20,7 @@
                         <td>{{ message.sender }}</td>
                         <td class="listMessage">
                             {% if message.new %}<strong>{% endif %} {% if message.replied %}<em>{% endif %}
-                                    <a href="{% url 'view_message' message.id %}#messageview" class="js-scroll-trigger">{{ message.subject|truncatewords:3 }} {% if message.new %}(New){% endif %}</a>
+                                    <a href="{% url 'view_message' message.id %}#messageTag" class="js-scroll-trigger">{{ message.subject|truncatewords:3 }} {% if message.new %}(New){% endif %}</a>
                                     {% if message.replied %}</em>{% endif %} {% if message.new %}</strong>{% endif %}</td>
                         <td class="listMessage">{{ message.sent_at|date:_("DATETIME_FORMAT") }}</td>
                         <td class="listMessage"><a href="{% url 'messages_delete' message.id %}">Supprimer</a></td>
@@ -31,6 +31,7 @@
             {% else %}
             <p>Aucun messages</p>
             {% endif %}
+            <span id="messageTag"></span>
         </div>
     </div>
     <br>
