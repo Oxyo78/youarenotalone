@@ -1,14 +1,15 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .forms import loginUser, createUser, MessageReply
+from .forms import loginUser, createUser, MessageReply, SearchPeople
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db.models.query import QuerySet
 from django_messages.models import Message, inbox_count_for
 from django.utils import timezone
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, JsonResponse
 from .models import Interest, UserProfile
+from django.core import serializers
 
 def index(request):
     """ Home page render """
@@ -39,6 +40,7 @@ def index(request):
                 unreadMessage = inbox_count_for(userName)
                 if unreadMessage == 0:
                     unreadMessage = None
+                searchForm = SearchPeople()
                 return render(request, 'website/templates/index.html', locals())
             else:
                 errorText = 'Utilisateur inconnu ou mauvais de mot de passe'
@@ -53,6 +55,7 @@ def index(request):
             email = subForm.cleaned_data['email']
             password = subForm.cleaned_data['password']
             password2 = subForm.cleaned_data['password2']
+            city = subForm.cleaned_data['city']
             # Check if the input password is correct
             if password == password2:
                 # Check if the username doesn't already exist in the database
@@ -74,12 +77,15 @@ def index(request):
                 errorText = 'Les mots de passe ne correspondent pas'
                 error = True
                 subscribeForm = createUser()
-                loginForm = loginUser()
+                loginForm = loginUser()           
+        
     else:
         error = False
         loginSuccess = False
         loginForm = loginUser()
         subscribeForm = createUser()
+
+    searchForm = SearchPeople()
 
     return render(request, 'website/templates/index.html', locals())
 
@@ -164,3 +170,23 @@ def account(request):
     interestList=user.userprofile.interestId.all()
 
     return render(request, 'website/templates/account.html', locals())
+
+@login_required
+def searchUsers(request):
+    """ Get a list of user with same interest """
+    searchInterest = request.GET.get('searchInterest')
+    print("search: " +searchInterest)
+    data = {}
+    try:
+        userInterest = Interest.objects.get(interestName = searchInterest.capitalize())
+        userLoc = userInterest.interestUser.all()
+        for item in userLoc:
+            data[item.user.username] = {}
+            data[item.user.username]['name'] = item.user.username
+            data[item.user.username]['Lng'] = item.coordinateLng
+            data[item.user.username]['Lat'] = item.coordinateLat    
+    except:
+        data['noResult'] = 'No results found'
+
+    print("data: "+str(data))
+    return JsonResponse(data)

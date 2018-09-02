@@ -86,3 +86,15 @@ class MessageReply(forms.Form):
                                 'placeholder': 'Tapez votre réponse ici'
                                 }
                             ))
+
+class SearchPeople(forms.Form):
+    """ Search form """
+    search = forms.CharField(label="",
+                            widget=forms.TextInput(
+                                attrs={
+                                    'class': 'form-control',
+                                    'id': 'searchInput',
+                                    'value': '',
+                                    'placeholder': 'Commencez votre recherche ici'
+                                }
+                            ))

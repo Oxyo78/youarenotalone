@@ -23,7 +23,7 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     
     <!-- Plugin CSS -->
-    <link href="{% static 'website/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet">
+    {% comment %} <link href="{% static 'website/vendor/magnific-popup/magnific-popup.css' %}" rel="stylesheet"> {% endcomment %}
     
     <!-- Custom styles for this template -->
     <link href="{% static 'website/css/creative.min.css' %}" rel="stylesheet">
@@ -35,7 +35,7 @@
     <!-- Plugin JavaScript -->
     <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
     <script src="{% static 'website/vendor/scrollreveal/scrollreveal.min.js' %}"></script>
-
+    {% block head %}{% endblock %}
   </head>
   
   <body id="page-top">
