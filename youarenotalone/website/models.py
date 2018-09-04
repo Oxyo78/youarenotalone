@@ -15,6 +15,7 @@ class Interest(models.Model):
 # Add more information to the user
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    city = models.CharField(max_length=45, null=False)
     coordinateLng = models.DecimalField(max_digits=10, decimal_places=7, null=True)
     coordinateLat = models.DecimalField(max_digits=10, decimal_places=7, null=True)
     interestId = models.ManyToManyField(Interest, related_name="interestUser")

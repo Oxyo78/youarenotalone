@@ -87,6 +87,28 @@ class MessageReply(forms.Form):
                                 }
                             ))
 
+
+class ComposeMessage(forms.Form):
+    """ Make a new message to user """
+    subject = forms.CharField(label = "Sujet",
+                            widget = forms.TextInput(
+                                attrs={
+                                    'class': 'form-control',
+                                    'id': 'subjectMessage',
+                                    'value': ''
+                                }
+                            ))
+
+    bodyMessage = forms.CharField(label = "Message",
+                                widget = forms.Textarea(
+                                    attrs={
+                                        'class': 'form-control',
+                                        'id': 'bodyMessage',
+                                        'value': ''
+                                    }
+                                ))
+
+
 class SearchPeople(forms.Form):
     """ Search form """
     search = forms.CharField(label="",

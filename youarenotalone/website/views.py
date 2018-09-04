@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .forms import loginUser, createUser, MessageReply, SearchPeople
+from .forms import loginUser, createUser, MessageReply, SearchPeople, ComposeMessage
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db.models.query import QuerySet
@@ -41,6 +41,7 @@ def index(request):
                 if unreadMessage == 0:
                     unreadMessage = None
                 searchForm = SearchPeople()
+                composeForm = ComposeMessage()
                 return render(request, 'website/templates/index.html', locals())
             else:
                 errorText = 'Utilisateur inconnu ou mauvais de mot de passe'
@@ -85,6 +86,7 @@ def index(request):
         loginForm = loginUser()
         subscribeForm = createUser()
 
+    composeForm = ComposeMessage()
     searchForm = SearchPeople()
 
     return render(request, 'website/templates/index.html', locals())
@@ -176,17 +178,46 @@ def searchUsers(request):
     """ Get a list of user with same interest """
     searchInterest = request.GET.get('searchInterest')
     print("search: " +searchInterest)
+    user = request.user
     data = {}
     try:
         userInterest = Interest.objects.get(interestName = searchInterest.capitalize())
         userLoc = userInterest.interestUser.all()
         for item in userLoc:
-            data[item.user.username] = {}
-            data[item.user.username]['name'] = item.user.username
-            data[item.user.username]['Lng'] = item.coordinateLng
-            data[item.user.username]['Lat'] = item.coordinateLat    
+            if item.user.username != user.username:
+                data[item.user.username] = {}
+                data[item.user.username]['name'] = item.user.username
+                data[item.user.username]['Lng'] = item.coordinateLng
+                data[item.user.username]['Lat'] = item.coordinateLat    
     except:
         data['noResult'] = 'No results found'
 
     print("data: "+str(data))
+    return JsonResponse(data)
+
+@login_required
+def newMessage(request):
+    """ Send a new message to the select user """
+    data = {}
+    recipient = request.POST.get('recipient')
+    subject = request.POST.get('subject')
+    body = request.POST.get('body')
+    now = timezone.now()
+    user = request.user
+    try:
+        recipientUser = User.objects.get(username=recipient)
+        msg = Message.objects.create(subject=subject,
+                                    body=body,
+                                    sender=user,
+                                    recipient_id=recipientUser.id,
+                                    sent_at=now)
+        msg.save()
+        data['succesText'] = 'Message envoyé'
+        data['loginSuccess'] = 'True'
+        print("data: "+str(data))
+
+    except ValueError as e:
+        print('erreur: ', e)
+        data['error'] = e
+        
     return JsonResponse(data)
