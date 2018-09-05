@@ -49,7 +49,7 @@ $(document).ready(function () {
 
                         //Set new markers
                         $.each(data, function (index, value) {
-                            var marker = L.marker([value.Lng, value.Lat], {title: value.name}).addTo(mymap);
+                            var marker = L.marker([value.Lng, value.Lat], { title: value.name }).addTo(mymap);
                             var nameLink = '<a class="nav-link mapLink" data-toggle="modal" data-target="#composeModal">Envoyer un message à ' + value.name + '</a>'
                             marker.bindPopup(nameLink);
                             markerList.push(marker);
@@ -60,6 +60,7 @@ $(document).ready(function () {
                             marker.addTo(markersLayer);
                             console.log(markerList);
                         });
+                        mymap.setView([markerList[0].properties.lng, markerList[0].properties.lat], 5);
                     }
                 }
             }
@@ -68,32 +69,34 @@ $(document).ready(function () {
 
     // Select user on map
     var userToChat;
-    markersLayer.on('click', function(e){
+    markersLayer.on('click', function (e) {
         userToChat = e.layer.properties;
         mymap.setView([userToChat.lng, userToChat.lat], 6);
         console.log(userToChat.name);
-        });
-    
+    });
+
 
     // Send a message to select user
     $(".composeForm").on('submit', function (event) {
         event.preventDefault();
-        var token =  jQuery("[name=csrfmiddlewaretoken]").val();
+        var token = jQuery("[name=csrfmiddlewaretoken]").val();
         console.log("Send !");
         var subject = $("#subjectMessage").val();
         var body = $("#bodyMessage").val();
         $.ajaxSetup({
-            beforeSend: function(xhr, settings) {
+            beforeSend: function (xhr, settings) {
                 xhr.setRequestHeader("X-CSRFToken", token);
             }
         });
         $.ajax({
             type: "POST",
             url: "newMessage/",
-            data: {'recipient': userToChat.name, 'subject': subject, 'body': body},
+            data: { 'recipient': userToChat.name, 'subject': subject, 'body': body },
             dataType: "json",
             success: function (data) {
                 $('#composeModal').modal("hide");
+                $('#alertMessage').html('<div class="alert alert-success fixed-top text-center"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><strong>Message envoyé</strong></div>');
+                setTimeout(function () { $(".alert").fadeOut('normal'); }, 3000);
                 console.log(data);
             }
         });

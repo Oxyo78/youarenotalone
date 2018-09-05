@@ -10,7 +10,9 @@
     <meta name="author" content="Yohan Vienne">
 
     <title>You are not alone</title>
-    
+
+    <link rel="icon" href="{% static 'website/img/favicon.png' %}" type="image/png">
+
     <!-- Bootstrap core CSS -->
     <link href="{% static 'website/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     
@@ -81,18 +83,20 @@
       </div>
 
       <!-- Alert message -->
-      {% if error %}
-      <div class="alert alert-warning fixed-top text-center">
+      <div id="alertMessage">
+        {% if error %}
+        <div class="alert alert-warning fixed-top text-center">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
           <strong>{{ errorText}}</strong>
         </div>
-      {% endif %}
-      {% if loginSuccess %}
-      <div class="alert alert-success fixed-top text-center">
+        {% endif %}
+        {% if loginSuccess %}
+        <div class="alert alert-success fixed-top text-center">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
           <strong>{{ succesText }}</strong>
         </div>
-      {% endif %}
+        {% endif %}
+      </div>
     </nav>
 
     <!-- Modal connexion -->
