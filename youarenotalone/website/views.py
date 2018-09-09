@@ -8,8 +8,9 @@ from django.db.models.query import QuerySet
 from django_messages.models import Message, inbox_count_for
 from django.utils import timezone
 from django.http import Http404, HttpResponse, JsonResponse
-from .models import Interest, UserProfile
+from .models import Interest, UserProfile, City
 from django.core import serializers
+from .utils import searchLocation
 
 def index(request):
     """ Home page render """
@@ -65,9 +66,10 @@ def index(request):
                     user.save()
                     user = authenticate(username=username, password=password)
                     login(request, user)
-                    succesText = 'Vous êtes connecté !'
+                    succesText = 'Vous êtes connecté ! Veuillez compléter votre profil !'
                     loginSuccess = True
                     error = False
+                    userName = request.user
                     return render(request, 'website/templates/index.html', locals())
                 else:
                     errorText = "Nom d'utilisateur déja pris"
@@ -187,13 +189,14 @@ def searchUsers(request):
             if item.user.username != user.username:
                 data[item.user.username] = {}
                 data[item.user.username]['name'] = item.user.username
-                data[item.user.username]['Lng'] = item.coordinateLng
-                data[item.user.username]['Lat'] = item.coordinateLat    
+                data[item.user.username]['Lng'] = item.city.coordinateLng
+                data[item.user.username]['Lat'] = item.city.coordinateLat    
     except:
         data['noResult'] = 'No results found'
 
     print("data: "+str(data))
     return JsonResponse(data)
+
 
 @login_required
 def newMessage(request):
@@ -221,3 +224,11 @@ def newMessage(request):
         data['error'] = e
         
     return JsonResponse(data)
+
+
+@login_required
+def getCityList(request):
+    """ return all city from the city database """
+    city = [e.cityName for e in City.objects.all()]
+
+    return JsonResponse(city)

@@ -21,8 +21,10 @@
                 </div>
                 <div class="col-md-5">
                     <dl>
+                        <dt>Ville:</dt>
+                        <dd>{{ user.userprofile.city }}</dd>
                         <dt>Coordonnée géographique:</dt>
-                        <dd>{{ user.userprofile.coordinateLng }} / {{ user.userprofile.coordinateLat }}</dd>
+                        <dd>{{ user.userprofile.city.coordinateLng }} / {{ user.userprofile.city.coordinateLat }}</dd>
                         <dt>Intérêt:</dt>
                         {% for interest in interestList %}
                         <dd>{{ interest }}</dd>
