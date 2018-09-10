@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .forms import loginUser, createUser, MessageReply, SearchPeople, ComposeMessage
+from .forms import loginUser, createUser, MessageReply, SearchPeople, ComposeMessage, InterestAdd, InterestDel
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db.models.query import QuerySet
@@ -175,6 +175,33 @@ def account(request):
 
     interestList=user.userprofile.interestId.all()
 
+    if request.method == "POST":
+        addForm = InterestAdd(request.POST)
+        if addForm.is_valid():
+            interestSelect = addForm.cleaned_data['interestAdd']
+            interestInput = addForm.cleaned_data['newInterest']
+            getInterest = Interest.objects.get(id=interestSelect)
+            user.userprofile.interestId.add(getInterest)
+            obj, newInterest = Interest.objects.get_or_create(interestName = interestInput.capitalize())
+            user.userprofile.interestId.add(obj.id)
+            user.save()
+            interestForm = InterestAdd()
+            delForm = InterestDel()
+            return render(request, 'website/templates/account.html', locals())
+        
+        delForm = InterestDel(request.POST)
+        if delForm.is_valid():
+            interestDel = delForm.cleaned_data['interestDel']
+            getInterest = Interest.objects.get(id=interestDel)
+            user.userprofile.interestId.remove(getInterest)
+            user.save()
+            interestForm = InterestAdd()
+            delForm = InterestDel()
+            return render(request, 'website/templates/account.html', locals())
+    else:
+        addForm = InterestAdd()
+        delForm = InterestDel()
+
     return render(request, 'website/templates/account.html', locals())
 
 @login_required
@@ -194,6 +221,9 @@ def searchUsers(request):
                 data[item.user.username]['Lng'] = item.city.coordinateLng
                 data[item.user.username]['Lat'] = item.city.coordinateLat    
     except:
+        data['noResult'] = 'No results found'
+    
+    if not data:
         data['noResult'] = 'No results found'
 
     print("data: "+str(data))
@@ -226,11 +256,3 @@ def newMessage(request):
         data['error'] = e
         
     return JsonResponse(data)
-
-
-# class CityAutocomplete(autocomplete.Select2QuerySetView):
-#     """ return all city from the city database """
-#     def get_queryset(self):
-#         city = [e.cityName for e in City.objects.all()]
-
-#         return city

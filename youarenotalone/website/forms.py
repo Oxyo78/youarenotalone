@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import ModelForm, Select
 from .models import City, Interest
 
 class loginUser(forms.Form):
@@ -46,18 +47,18 @@ class createUser(forms.Form):
                                 }
                             ))
 
-    def getCity():
-        return City.objects.values_list('id', 'cityName').order_by('cityName')
-        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
+    # def getCity():
+    #     return City.objects.values_list('id', 'cityName').order_by('cityName')
+    #     # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
 
-    city = forms.ChoiceField(label="Ville ",
-                            widget=forms.Select(
-                                attrs={
-                                    'class': 'form-control',
-                                    'id': 'citySelect'
-                                }),
-                            choices=getCity
-                            )
+    # city = forms.ChoiceField(label="Ville ",
+    #                         widget=forms.Select(
+    #                             attrs={
+    #                                 'class': 'form-control',
+    #                                 'id': 'citySelect'
+    #                             }),
+    #                         choices=getCity
+    #                         )
     password = forms.CharField(label="Mot de passe",
                                widget=forms.PasswordInput(
                                    attrs={
@@ -122,3 +123,46 @@ class SearchPeople(forms.Form):
                                      'placeholder': 'Commencez votre recherche ici'
                                  }
                              ))
+
+class InterestAdd(forms.Form):
+    """ Add an interest to the user """
+
+    def getInterest():
+        return Interest.objects.values_list('id', 'interestName').order_by('interestName')
+        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
+
+    interestAdd = forms.ChoiceField(label="Rajouter un Intérêt",
+                            widget=forms.Select(
+                                attrs={
+                                    'class': 'form-control',
+                                    'id': 'addInteretSelect'
+                                }),
+                            choices=getInterest
+                            )
+    
+    newInterest = forms.CharField(label="Un nouvel intérêt",
+                            widget=forms.TextInput(
+                                attrs={
+                                    'class': 'form-control',
+                                    'id': 'interestInput',
+                                    'value': '',
+                                    'placeholder': 'Entrez un intérêt non listé'
+                                }
+                            ), required=False)
+
+
+class InterestDel(forms.Form):
+    """ Delete an interest to the user """
+
+    def getInterest():
+        return Interest.objects.values_list('id', 'interestName').order_by('interestName')
+        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
+
+    interestDel = forms.ChoiceField(label="Supprimer un Intérêt",
+                            widget=forms.Select(
+                                attrs={
+                                    'class': 'form-control',
+                                    'id': 'delInteretSelect'
+                                }),
+                            choices=getInterest
+                            )
