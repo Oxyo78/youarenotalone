@@ -10,7 +10,6 @@ from django.utils import timezone
 from django.http import Http404, HttpResponse, JsonResponse
 from .models import Interest, UserProfile, City
 from django.core import serializers
-from .utils import searchLocation
 
 def index(request):
     """ Home page render """
@@ -57,12 +56,15 @@ def index(request):
             email = subForm.cleaned_data['email']
             password = subForm.cleaned_data['password']
             password2 = subForm.cleaned_data['password2']
-            city = subForm.cleaned_data['city']
+            cityInput = subForm.cleaned_data['city']
             # Check if the input password is correct
             if password == password2:
                 # Check if the username doesn't already exist in the database
                 if not User.objects.filter(username=username).exists():
+                    city = City.objects.get(id=cityInput)
                     user = User.objects.create_user(username, email, password)
+                    user.save()
+                    user.userprofile.city = city
                     user.save()
                     user = authenticate(username=username, password=password)
                     login(request, user)
@@ -226,9 +228,9 @@ def newMessage(request):
     return JsonResponse(data)
 
 
-@login_required
-def getCityList(request):
-    """ return all city from the city database """
-    city = [e.cityName for e in City.objects.all()]
+# class CityAutocomplete(autocomplete.Select2QuerySetView):
+#     """ return all city from the city database """
+#     def get_queryset(self):
+#         city = [e.cityName for e in City.objects.all()]
 
-    return JsonResponse(city)
+#         return city

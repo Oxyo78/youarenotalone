@@ -12,5 +12,4 @@ urlpatterns = [
     path('account/', views.account, name='account'),
     path('search/', views.searchUsers, name='search'),
     path('newMessage/', views.newMessage, name='newMessage'),
-    path('location/', views.getCityList, name='location')
 ]
