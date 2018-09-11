@@ -212,7 +212,7 @@ def searchUsers(request):
     user = request.user
     data = {}
     try:
-        userInterest = Interest.objects.get(interestName = searchInterest.capitalize())
+        userInterest = Interest.objects.get(id = searchInterest)
         userLoc = userInterest.interestUser.all()
         for item in userLoc:
             if item.user.username != user.username:
@@ -256,3 +256,14 @@ def newMessage(request):
         data['error'] = e
         
     return JsonResponse(data)
+
+def legalize(request):
+    """ Show the legalize page """
+    user = request.user
+
+    # Check email unread
+    unreadMessage = inbox_count_for(user)
+    if unreadMessage == 0:
+        unreadMessage = None
+
+    return render(request, 'website/templates/legal.html', locals())

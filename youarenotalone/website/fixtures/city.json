@@ -1,0 +1,10 @@
+[{
+    "model": "website.city",
+    "pk": 1,
+    "fields": {
+        "cityName": "AAST",
+        "postalCode": "12345",
+        "coordinateLng": "45.461591172",
+        "coordinateLat": "5.9580075924"
+    }
+}]

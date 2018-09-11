@@ -20,7 +20,7 @@ class UrlTestCase(TestCase):
 
 class MySeleniumTests(StaticLiveServerTestCase):
     """ Try connexion and logout of a user """
-    fixtures = ['user.json']
+    fixtures = ['user.json', 'city.json']
 
     @classmethod
     def setUpClass(cls):
@@ -56,6 +56,11 @@ class MySeleniumTests(StaticLiveServerTestCase):
         username_input.send_keys('Paul02')
         password_input = self.selenium.find_element_by_id("emailInput")
         password_input.send_keys('paul@example.com')
+        selectInput = self.selenium.find_element_by_id("citySelect")
+        for option in selectInput.find_elements_by_tag_name('AAST'):
+            if option.text == 'AAST':
+                option.click() # select() in earlier versions of webdriver
+                break
         password_input = self.selenium.find_element_by_id("passwordInput")
         password_input.send_keys('azerty')
         password_input = self.selenium.find_element_by_id("password2Input")

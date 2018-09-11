@@ -47,18 +47,18 @@ class createUser(forms.Form):
                                 }
                             ))
 
-    # def getCity():
-    #     return City.objects.values_list('id', 'cityName').order_by('cityName')
-    #     # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
+    def getCity():
+        return City.objects.values_list('id', 'cityName').order_by('cityName')
+        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
 
-    # city = forms.ChoiceField(label="Ville ",
-    #                         widget=forms.Select(
-    #                             attrs={
-    #                                 'class': 'form-control',
-    #                                 'id': 'citySelect'
-    #                             }),
-    #                         choices=getCity
-    #                         )
+    city = forms.ChoiceField(label="Ville ",
+                            widget=forms.Select(
+                                attrs={
+                                    'class': 'form-control',
+                                    'id': 'citySelect'
+                                }),
+                            choices=getCity
+                            )
     password = forms.CharField(label="Mot de passe",
                                widget=forms.PasswordInput(
                                    attrs={
@@ -114,15 +114,18 @@ class ComposeMessage(forms.Form):
 
 class SearchPeople(forms.Form):
     """ Search form """
-    search = forms.CharField(label="",
-                             widget=forms.TextInput(
-                                 attrs={
-                                     'class': 'form-control',
-                                     'id': 'searchInput',
-                                     'value': '',
-                                     'placeholder': 'Commencez votre recherche ici'
-                                 }
-                             ))
+    def getInterest():
+        return Interest.objects.values_list('id', 'interestName').order_by('interestName')
+        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
+
+    search = forms.ChoiceField(widget=forms.Select(
+                                attrs={
+                                    'class': 'form-control',
+                                    'id': 'searchInput'
+                                }),
+                            choices=getInterest,
+                            label=''
+                            )
 
 class InterestAdd(forms.Form):
     """ Add an interest to the user """
