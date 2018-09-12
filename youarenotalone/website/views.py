@@ -8,7 +8,7 @@ from django.db.models.query import QuerySet
 from django_messages.models import Message, inbox_count_for
 from django.utils import timezone
 from django.http import Http404, HttpResponse, JsonResponse
-from .models import Interest, UserProfile, City
+from .models import Interest, UserProfile, City, News
 from django.core import serializers
 
 def index(request):
@@ -16,6 +16,9 @@ def index(request):
     error = False
     errorText = ''
     succesText = ''
+
+    # Get the last 3 news from the database
+    news = News.objects.all().order_by('id')[:3]
 
     # Get the number of unread message
     if request.user.is_authenticated:
