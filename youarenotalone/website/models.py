@@ -17,7 +17,7 @@ class City(models.Model):
 # Interest table
 class Interest(models.Model):
     """ List of interests """
-    interestName = models.CharField(max_length=35, unique=True)
+    interestName = models.CharField(max_length=35)
      
     def __str__(self):
         return self.interestName
@@ -27,7 +27,7 @@ class Interest(models.Model):
 class UserProfile(models.Model):
     """ User profile extension """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    city = models.OneToOneField(City, on_delete=models.DO_NOTHING, null=True)
+    city = models.ForeignKey(City, on_delete=models.DO_NOTHING, null=True)
     interestId = models.ManyToManyField(Interest, related_name="interestUser")
     
     def __str__(self):

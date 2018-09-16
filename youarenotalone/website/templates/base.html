@@ -122,6 +122,7 @@
       </div>
     </div>
     
+    {% if not user.is_authenticated %}
     <!-- Modal subscribe -->
     <div class="modal fade text-uppercase" id="subscribeModal" role="dialog">
       <div class="modal-dialog">
@@ -144,7 +145,7 @@
         </div>        
       </div>
     </div>
-
+    
     <!-- Modal new message to user -->
     <div class="modal fade text-uppercase" id="composeModal" role="dialog">
       <div class="modal-dialog">
@@ -167,7 +168,8 @@
         </div>
       </div>
     </div>
-
+    {% endif %}
+    
     {% block content %}{% endblock %}
 
     <footer id="footerpage">
@@ -175,7 +177,7 @@
           <div class="row">
             <div class="col-lg-6 text-center footy">
               <p>
-                <a href="{% url 'legalize' %}"">Mentions légales</a>
+                <a href="{% url 'legalize' %}">Mentions légales</a>
               </p>
             </div>
             <div class="col-lg-6 text-center footy">

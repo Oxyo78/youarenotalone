@@ -1,0 +1,9 @@
+[
+{
+  "model": "website.interest",
+  "pk": 1,
+  "fields": {
+    "interestName": "Tennis"
+  }
+}
+]

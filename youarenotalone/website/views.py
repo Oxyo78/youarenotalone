@@ -264,9 +264,11 @@ def legalize(request):
     """ Show the legalize page """
     user = request.user
 
-    # Check email unread
-    unreadMessage = inbox_count_for(user)
-    if unreadMessage == 0:
-        unreadMessage = None
+    # Get the number of unread message
+    if request.user.is_authenticated:
+        userName = request.user
+        unreadMessage = inbox_count_for(userName)
+        if unreadMessage == 0:
+            unreadMessage = None
 
     return render(request, 'website/templates/legal.html', locals())

@@ -1,0 +1,34 @@
+[
+{
+  "model": "django_messages.message",
+  "pk": 1,
+  "fields": {
+    "subject": "Re: Paul to Yohan",
+    "body": "Salut ! tu aime le tennis ?",
+    "sender": 8,
+    "recipient": 7,
+    "parent_msg": null,
+    "sent_at": "2018-09-14T18:56:11.273Z",
+    "read_at": "2018-09-16T07:31:19.762Z",
+    "replied_at": null,
+    "sender_deleted_at": null,
+    "recipient_deleted_at": null
+  }
+},
+{
+  "model": "django_messages.message",
+  "pk": 2,
+  "fields": {
+    "subject": "Re: Paul to Yohan",
+    "body": "Oui j'adore, sa te dit une partie ?",
+    "sender": 7,
+    "recipient": 8,
+    "parent_msg": null,
+    "sent_at": "2018-09-16T07:31:46.484Z",
+    "read_at": null,
+    "replied_at": null,
+    "sender_deleted_at": null,
+    "recipient_deleted_at": null
+  }
+}
+]

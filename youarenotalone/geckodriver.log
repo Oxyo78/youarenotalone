@@ -299,3 +299,425 @@ JavaScript error: http://localhost:33667/static/website/js/creative.min.js, line
 JavaScript error: http://localhost:33667/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
 [Parent 589, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536861676875	geckodriver	INFO	geckodriver 0.21.0
+1536861676882	geckodriver	INFO	Listening on 127.0.0.1:39879
+1536861677888	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.XGzZjCLRkVBo"
+1536861680311	Marionette	INFO	Listening on port 40611
+1536861680422	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:53071/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:53071/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:53071/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:53071/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:53071/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:53071/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:53071/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:53071/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:53071/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:53071/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:53071/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:53071/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:53071/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536862698612	geckodriver	INFO	geckodriver 0.21.0
+1536862698620	geckodriver	INFO	Listening on 127.0.0.1:33823
+1536862699622	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ax5NGze4EBdt"
+1536952578977	geckodriver	INFO	geckodriver 0.21.0
+1536952578991	geckodriver	INFO	Listening on 127.0.0.1:52081
+1536952579982	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.8pixgDP0Pejq"
+1536952583019	Marionette	INFO	Listening on port 38285
+1536952583122	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536952647970	geckodriver	INFO	geckodriver 0.21.0
+1536952647978	geckodriver	INFO	Listening on 127.0.0.1:43969
+1536952648978	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ybA2KI1uKdar"
+1536952651856	Marionette	INFO	Listening on port 33845
+1536952651920	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/SavantShieldStudy.jsm, line 171: TypeError: this.addonListener is undefined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_next
+1536952691689	geckodriver	INFO	geckodriver 0.21.0
+1536952691697	geckodriver	INFO	Listening on 127.0.0.1:52233
+1536952692705	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.S8ky9nLFIJPe"
+1536952695590	Marionette	INFO	Listening on port 37899
+1536952695651	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/SavantShieldStudy.jsm, line 171: TypeError: this.addonListener is undefined
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+1536952712622	geckodriver	INFO	geckodriver 0.21.0
+1536952712632	geckodriver	INFO	Listening on 127.0.0.1:42111
+1536952713634	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.TcTtITehxEfj"
+1536952716567	Marionette	INFO	Listening on port 35231
+1536952716693	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54583/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+[Parent 14759, Gecko_IOThread] WARNING: pipe error (75): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536952828231	geckodriver	INFO	geckodriver 0.21.0
+1536952828241	geckodriver	INFO	Listening on 127.0.0.1:60309
+1536952829241	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.fa6wRXLYGrr9"
+1536952832172	Marionette	INFO	Listening on port 35479
+1536952832280	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44091/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536953075943	geckodriver	INFO	geckodriver 0.21.0
+1536953075949	geckodriver	INFO	Listening on 127.0.0.1:32779
+1536953076956	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.VjoFME2DS63k"
+1536953079516	Marionette	INFO	Listening on port 38589
+1536953079590	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:39461/, line 223: ReferenceError: L is not defined
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/base.js, line 15: ReferenceError: L is not defined
+1536953119196	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: timeout
+1536953124011	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:39461/, line 234: ReferenceError: L is not defined
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39461/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+[Parent 16791, Gecko_IOThread] WARNING: pipe error (74): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1536953285055	geckodriver	INFO	geckodriver 0.21.0
+1536953285061	geckodriver	INFO	Listening on 127.0.0.1:46535
+1536953286062	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.OWbSj4c21UFa"
+1536953288800	Marionette	INFO	Listening on port 36573
+1536953288893	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 17290, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536953837219	geckodriver	INFO	geckodriver 0.21.0
+1536953837228	geckodriver	INFO	Listening on 127.0.0.1:40619
+1536953838226	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.3IS7uLUAoaEU"
+1536953840490	Marionette	INFO	Listening on port 46837
+1536953840614	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:48987/, line 223: ReferenceError: L is not defined
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:48987/, line 234: ReferenceError: L is not defined
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/base.js, line 15: ReferenceError: L is not defined
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:48987/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+[Parent 18046, Gecko_IOThread] WARNING: pipe error (74): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1536954522034	geckodriver	INFO	geckodriver 0.21.0
+1536954522040	geckodriver	INFO	Listening on 127.0.0.1:41355
+1536954523044	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.l73GeWM8FCNb"
+1536954525169	Marionette	INFO	Listening on port 37037
+1536954525315	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_next
+1536954586043	geckodriver	INFO	geckodriver 0.21.0
+1536954586049	geckodriver	INFO	Listening on 127.0.0.1:34575
+1536954587051	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.NLjQNzCopsmv"
+1536954589190	Marionette	INFO	Listening on port 39059
+1536954589335	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:39505/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39505/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:39505/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39505/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39505/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:39505/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39505/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39505/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:39505/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39505/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:39505/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39505/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:39505/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+[Parent 19582, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536954606382	geckodriver	INFO	geckodriver 0.21.0
+1536954606392	geckodriver	INFO	Listening on 127.0.0.1:48023
+1536954607390	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.cAT8k9jkGtqM"
+1536954609766	Marionette	INFO	Listening on port 46139
+1536954609821	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/SavantShieldStudy.jsm, line 171: TypeError: this.addonListener is undefined
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+1536954736792	geckodriver	INFO	geckodriver 0.21.0
+1536954736798	geckodriver	INFO	Listening on 127.0.0.1:52991
+1536954737802	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.PlUZJBXzSSEc"
+1536954739962	Marionette	INFO	Listening on port 36859
+1536954740099	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: PushService: 
+  clearOriginData: Error clearing origin data:
+  TypeError
+JavaScript error: resource:///modules/SavantShieldStudy.jsm, line 171: TypeError: this.addonListener is undefined
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+1536954820343	geckodriver	INFO	geckodriver 0.21.0
+1536954820348	geckodriver	INFO	Listening on 127.0.0.1:58613
+1536954821359	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.hpvTYNwnFBsI"
+1536954823559	Marionette	INFO	Listening on port 33403
+1536954823574	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:54407/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:54407/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:54407/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536954873715	geckodriver	INFO	geckodriver 0.21.0
+1536954873724	geckodriver	INFO	Listening on 127.0.0.1:51517
+1536954874729	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.JGh08K6CfYoq"
+1536954877064	Marionette	INFO	Listening on port 35137
+1536954877200	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:51055/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:51055/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:51055/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536954971581	geckodriver	INFO	geckodriver 0.21.0
+1536954971588	geckodriver	INFO	Listening on 127.0.0.1:57913
+1536954972591	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.2hfXc6GOHXD6"
+1536954974856	Marionette	INFO	Listening on port 46443
+1536954974944	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:56399/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:56399/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+console.error: "stylesheets actor: fetch failed for http://localhost:56399/static/website/css/base.css, using system principal instead."
+console.error: (new TypeError("this.markup is null", "chrome://devtools/content/inspector/inspector.js", 262))
+JavaScript error: http://localhost:56399/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+Handler function threw an exception: TypeError: this.walker is null
+Stack: get conn@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/inspector/node.js:61:5
+parent@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:813:5
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:898:18
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:988:5
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/inspector/node.js:70:5
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:915:9
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:988:5
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/styles.js:89:5
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:915:9
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:988:5
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/inspector/inspector.js:87:5
+removeActor@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/common.js:260:7
+APDestroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/common.js:223:7
+removeActorPool/<@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1532:27
+removeActorPool@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1532:9
+_detach@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js:917:7
+exit@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js:512:5
+ContentActor.prototype.exit@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/content.js:70:3
+destroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js:495:5
+removeActor@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/common.js:260:7
+APDestroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/common.js:223:7
+onClosed/<@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1860:35
+onClosed@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1860:5
+close@resource://devtools/shared/base-loader.js -> resource://devtools/shared/transport/transport.js:731:7
+close@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1471:7
+onDisconnect<@resource://devtools/server/startup/frame.js:121:7
+exports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14
+Line: 61, column: 5
+console.error: "Handler function threw an exception: TypeError: this.walker is null\nStack: get conn@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/inspector/node.js:61:5\nparent@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:813:5\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:898:18\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:988:5\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/inspector/node.js:70:5\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:915:9\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:988:5\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/styles.js:89:5\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:915:9\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/shared/protocol.js:988:5\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/inspector/inspector.js:87:5\nremoveActor@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/common.js:260:7\nAPDestroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/common.js:223:7\nremoveActorPool/<@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1532:27\nremoveActorPool@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1532:9\n_detach@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js:917:7\nexit@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js:512:5\nContentActor.prototype.exit@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/content.js:70:3\ndestroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/tab.js:495:5\nremoveActor@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/common.js:260:7\nAPDestroy@resource://devtools/shared/base-loader.js -> resource://devtools/server/actors/common.js:223:7\nonClosed/<@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1860:35\nonClosed@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1860:5\nclose@resource://devtools/shared/base-loader.js -> resource://devtools/shared/transport/transport.js:731:7\nclose@resource://devtools/shared/base-loader.js -> resource://devtools/server/main.js:1471:7\nonDisconnect<@resource://devtools/server/startup/frame.js:121:7\nexports.makeInfallible/<@resource://devtools/shared/base-loader.js -> resource://devtools/shared/ThreadSafeDevToolsUtils.js:109:14\nLine: 61, column: 5"
+[Parent 21298, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536955502017	geckodriver	INFO	geckodriver 0.21.0
+1536955502022	geckodriver	INFO	Listening on 127.0.0.1:46477
+1536955503028	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.90jw3xMv2LxG"
+1536955505628	Marionette	INFO	Listening on port 44737
+1536955505672	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:58413/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:58413/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:58413/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536955684394	geckodriver	INFO	geckodriver 0.21.0
+1536955684402	geckodriver	INFO	Listening on 127.0.0.1:36741
+1536955685405	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.VFt9KEZ4j2hB"
+1536955687617	Marionette	INFO	Listening on port 35021
+1536955687753	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:51287/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:51287/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:51287/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 22555, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536955926210	geckodriver	INFO	geckodriver 0.21.0
+1536955926218	geckodriver	INFO	Listening on 127.0.0.1:39373
+1536955927217	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.pDJBryVvqcW6"
+1536955930454	Marionette	INFO	Listening on port 42257
+1536955930569	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:46349/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46349/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:46349/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536956010372	geckodriver	INFO	geckodriver 0.21.0
+1536956010384	geckodriver	INFO	Listening on 127.0.0.1:56091
+1536956011379	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.2vpvkjLeN8Hc"
+1536956014594	Marionette	INFO	Listening on port 45013
+1536956014715	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:51129/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:51129/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:51129/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536956287925	geckodriver	INFO	geckodriver 0.21.0
+1536956287932	geckodriver	INFO	Listening on 127.0.0.1:34387
+1536956288930	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.jpAit3OdEUIm"
+1536956292254	Marionette	INFO	Listening on port 42535
+1536956292376	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:43513/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:43513/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:43513/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 24181, Gecko_IOThread] WARNING: pipe error (59): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536956339473	geckodriver	INFO	geckodriver 0.21.0
+1536956339479	geckodriver	INFO	Listening on 127.0.0.1:42673
+1536956340480	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.OrpmdyGzLNqP"
+1536956343588	Marionette	INFO	Listening on port 37397
+1536956343603	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:37591/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:37591/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:37591/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 24536, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536956671919	geckodriver	INFO	geckodriver 0.21.0
+1536956671925	geckodriver	INFO	Listening on 127.0.0.1:33589
+1536956672928	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.dkBSQQCgH0O1"
+1536956675095	Marionette	INFO	Listening on port 38199
+1536956675152	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:55647/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:55647/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:55647/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 25135, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1536959238228	geckodriver	INFO	geckodriver 0.21.0
+1536959238233	geckodriver	INFO	Listening on 127.0.0.1:58011
+1536959239238	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.DKwUyq7oD9TS"
+1536959241860	Marionette	INFO	Listening on port 39245
+1536959241975	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:59131/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:59131/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:59131/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+[Parent 28387, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1537082666967	geckodriver	INFO	geckodriver 0.21.0
+1537082666979	geckodriver	INFO	Listening on 127.0.0.1:55519
+1537082667972	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.HFxBylk4dLgV"
+1537082670844	Marionette	INFO	Listening on port 35895
+1537082670918	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource:///modules/SavantShieldStudy.jsm, line 171: TypeError: this.addonListener is undefined
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: jar:file:///usr/lib/firefox/omni.ja!/components/nsUrlClassifierListManager.js, line 321: NS_ERROR_NOT_INITIALIZED: Component returned failure code: 0xc1f30001 (NS_ERROR_NOT_INITIALIZED) [nsIUrlClassifierDBService.getTables]
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting request to DirectoryIterator_prototype_next
+1537082747198	geckodriver	INFO	geckodriver 0.21.0
+1537082747204	geckodriver	INFO	Listening on 127.0.0.1:39671
+1537082748206	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.547WMItDIZSY"
+1537082750965	Marionette	INFO	Listening on port 41455
+1537082751051	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 17700, Gecko_IOThread] WARNING: pipe error (73): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1537082901500	geckodriver	INFO	geckodriver 0.21.0
+1537082901508	geckodriver	INFO	Listening on 127.0.0.1:40531
+1537082902506	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.7n1lZlu4JdUv"
+1537082905334	Marionette	INFO	Listening on port 44477
+1537082905438	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:44729/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44729/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44729/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44729/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44729/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44729/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44729/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44729/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44729/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44729/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:44729/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44729/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:44729/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+[Parent 18106, Gecko_IOThread] WARNING: pipe error (75): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1537084474463	geckodriver	INFO	geckodriver 0.21.0
+1537084474468	geckodriver	INFO	Listening on 127.0.0.1:45581
+1537084475473	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.DICKOebTBmfg"
+1537084477754	Marionette	INFO	Listening on port 41059
+1537084477822	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:60367/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:60367/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:60367/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:60367/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:60367/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+[Parent 20566, Gecko_IOThread] WARNING: pipe error (59): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping

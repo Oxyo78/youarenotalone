@@ -140,7 +140,7 @@ class InterestAdd(forms.Form):
                                     'class': 'form-control',
                                     'id': 'addInteretSelect'
                                 }),
-                            choices=getInterest
+                            choices=getInterest,
                             )
     
     newInterest = forms.CharField(label="Un nouvel intérêt",
