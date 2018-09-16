@@ -30,7 +30,7 @@ else:
 
 ALLOWED_HOSTS = []
 
-
+CONN_MAX_AGE = 600
 # Application definition
 
 INSTALLED_APPS = [
@@ -141,7 +141,7 @@ if os.environ.get('ENV') == 'PRODUCTION':
 
     # Extra places for collectstatic to find static files.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django_messages.context_processors.inbox',
 )

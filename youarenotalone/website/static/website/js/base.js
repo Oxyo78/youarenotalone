@@ -50,7 +50,7 @@ $(document).ready(function () {
                         //Set new markers
                         $.each(data, function (index, value) {
                             var marker = L.marker([value.Lng, value.Lat], { title: value.name }).addTo(mymap);
-                            var nameLink = '<a class="nav-link mapLink" data-toggle="modal" data-target="#composeModal">Envoyer un message à ' + value.name + '</a>'
+                            var nameLink = '<a class="nav-link mapLink" data-toggle="modal" data-target="#composeModal" href="#">Envoyer un message à ' + value.name + '</a>'
                             marker.bindPopup(nameLink);
                             markerList.push(marker);
                             marker.properties = {};
