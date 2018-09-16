@@ -30,7 +30,7 @@ else:
 
 ALLOWED_HOSTS = []
 
-CONN_MAX_AGE = 600
+SESSION_COOKIE_AGE = 600
 # Application definition
 
 INSTALLED_APPS = [
