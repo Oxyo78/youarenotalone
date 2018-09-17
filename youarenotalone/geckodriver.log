@@ -721,3 +721,23 @@ JavaScript error: http://localhost:60367/static/website/js/creative.min.js, line
 JavaScript error: http://localhost:60367/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
 [Parent 20566, Gecko_IOThread] WARNING: pipe error (59): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1537211629093	geckodriver	INFO	geckodriver 0.21.0
+1537211629107	geckodriver	INFO	Listening on 127.0.0.1:60347
+1537211630101	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.kepzl07OSEMq"
+1537211633242	Marionette	INFO	Listening on port 32893
+1537211633367	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46763/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46763/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46763/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46763/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:46763/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
+[Parent 1107, Gecko_IOThread] WARNING: pipe error (75): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
