@@ -22,7 +22,7 @@ env: DJANGO_SETTINGS_MODULE="settings.travis"
   - MOZ_HEADLESS=1
 
 script:
-  - python youarenotalone.manage.py test
+  - python youarenotalone/manage.py test
 
 branches:
   only:
