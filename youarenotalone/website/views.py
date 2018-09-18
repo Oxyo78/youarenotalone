@@ -185,25 +185,31 @@ def account(request):
             interestInput = addForm.cleaned_data['newInterest']
             getInterest = Interest.objects.get(id=interestSelect)
             user.userprofile.interestId.add(getInterest)
-            obj, newInterest = Interest.objects.get_or_create(interestName = interestInput.capitalize())
-            user.userprofile.interestId.add(obj.id)
-            user.save()
-            interestForm = InterestAdd()
-            delForm = InterestDel()
-            return render(request, 'website/templates/account.html', locals())
+            if interestInput:
+                print('aa')
+                obj, newInterest = Interest.objects.get_or_create(interestName = interestInput.capitalize())
+                user.userprofile.interestId.add(obj.id)
+                user.save()
+                interestForm = InterestAdd()
+                delForm = InterestDel(user=user)
+                return render(request, 'website/templates/account.html', locals())
+            else:
+                interestForm = InterestAdd()
+                delForm = InterestDel(user=user)
+                return render(request, 'website/templates/account.html', locals())
         
-        delForm = InterestDel(request.POST)
+        delForm = InterestDel(request.POST, user=user)
         if delForm.is_valid():
             interestDel = delForm.cleaned_data['interestDel']
             getInterest = Interest.objects.get(id=interestDel)
             user.userprofile.interestId.remove(getInterest)
             user.save()
             interestForm = InterestAdd()
-            delForm = InterestDel()
+            delForm = InterestDel(user=user)
             return render(request, 'website/templates/account.html', locals())
     else:
         addForm = InterestAdd()
-        delForm = InterestDel()
+        delForm = InterestDel(user=user)
 
     return render(request, 'website/templates/account.html', locals())
 

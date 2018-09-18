@@ -2,6 +2,7 @@ from django import forms
 from django.forms import ModelForm, Select
 from .models import City, Interest
 
+
 class loginUser(forms.Form):
     """ Login acces """
     username = forms.CharField(label="Nom d'utilisateur",
@@ -154,18 +155,23 @@ class InterestAdd(forms.Form):
                             ), required=False)
 
 
+def userInterest(user):
+    return user.userprofile.interestId.values_list('id', 'interestName').order_by('interestName')
+
 class InterestDel(forms.Form):
-    """ Delete an interest to the user """
+    """ Delete an interest of the user """
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user')
+        super(InterestDel, self).__init__(*args, **kwargs)
+        user = self.user
 
-    def getInterest():
-        return Interest.objects.values_list('id', 'interestName').order_by('interestName')
-        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
 
-    interestDel = forms.ChoiceField(label="Supprimer un Intérêt",
-                            widget=forms.Select(
-                                attrs={
-                                    'class': 'form-control',
-                                    'id': 'delInteretSelect'
-                                }),
-                            choices=getInterest
-                            )
+    
+        self.fields['interestDel'] = forms.ChoiceField(label="Supprimer un Intérêt",
+                                widget=forms.Select(
+                                    attrs={
+                                        'class': 'form-control',
+                                        'id': 'delInteretSelect'
+                                    }),
+                                choices=userInterest(user)
+                                    )

@@ -30,7 +30,7 @@ else:
 
 ALLOWED_HOSTS = []
 
-SESSION_COOKIE_AGE = 600
+SESSION_COOKIE_AGE = 3000
 # Application definition
 
 INSTALLED_APPS = [
