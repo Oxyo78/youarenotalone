@@ -42,7 +42,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">You are not alone</a>
+        <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}#page-top">You are not alone</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -55,7 +55,7 @@
             {% endif %}
             <li class="nav-item">
               <!-- Tester si page principale pour bouton News -->
-              <a class="nav-link js-scroll-trigger" href="#">News</a> 
+              <a class="nav-link js-scroll-trigger" href="{% url 'home' %}#services">News</a> 
             </li>
             {% if not user.is_authenticated %}
             <li class="nav-item">
