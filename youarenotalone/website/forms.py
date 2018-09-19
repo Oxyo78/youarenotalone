@@ -142,7 +142,7 @@ class InterestAdd(forms.Form):
                                     'id': 'addInteretSelect'
                                 }),
                             choices=getInterest,
-                            )
+                            required=False)
     
     newInterest = forms.CharField(label="Un nouvel intérêt",
                             widget=forms.TextInput(
@@ -151,8 +151,8 @@ class InterestAdd(forms.Form):
                                     'id': 'interestInput',
                                     'value': '',
                                     'placeholder': 'Entrez un intérêt non listé'
-                                }
-                            ), required=False)
+                                }),
+                            required=False)
 
 
 def userInterest(user):
@@ -165,13 +165,11 @@ class InterestDel(forms.Form):
         super(InterestDel, self).__init__(*args, **kwargs)
         user = self.user
 
-
-    
         self.fields['interestDel'] = forms.ChoiceField(label="Supprimer un Intérêt",
                                 widget=forms.Select(
                                     attrs={
                                         'class': 'form-control',
                                         'id': 'delInteretSelect'
                                     }),
-                                choices=userInterest(user)
-                                    )
+                                choices=userInterest(user),
+                                required=False)
