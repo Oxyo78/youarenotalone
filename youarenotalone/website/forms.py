@@ -117,7 +117,6 @@ class SearchPeople(forms.Form):
     """ Search form """
     def getInterest():
         return Interest.objects.values_list('id', 'interestName').order_by('interestName')
-        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
 
     search = forms.ChoiceField(widget=forms.Select(
                                 attrs={
@@ -133,7 +132,6 @@ class InterestAdd(forms.Form):
 
     def getInterest():
         return Interest.objects.values_list('id', 'interestName').order_by('interestName')
-        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
 
     interestAdd = forms.ChoiceField(label="Rajouter un Intérêt",
                             widget=forms.Select(
