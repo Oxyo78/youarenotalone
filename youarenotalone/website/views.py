@@ -75,6 +75,8 @@ def index(request):
                     loginSuccess = True
                     error = False
                     userName = request.user
+                    composeForm = ComposeMessage()
+                    searchForm = SearchPeople()
                     return render(request, 'website/templates/index.html', locals())
                 else:
                     errorText = "Nom d'utilisateur déja pris"
