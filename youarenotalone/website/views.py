@@ -1,3 +1,4 @@
+import re
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
@@ -60,40 +61,64 @@ def index(request):
             password = subForm.cleaned_data['password']
             password2 = subForm.cleaned_data['password2']
             cityInput = subForm.cleaned_data['city']
-            # Check if the input password is correct
+            # Check if the input password is correct (lenght 8 and 1 number inside)
             if password == password2:
-                # Check if the username doesn't already exist in the database
-                if not User.objects.filter(username=username).exists():
-                    try:
-                        cityParse, postCodeParse = cityInput.split(" ")
-                        print(cityParse)
-                        print(postCodeParse)
-                        city = City.objects.get(cityName=cityParse.upper())
-                        print(city)
-                        user = User.objects.create_user(username.capitalize(), email, password)
-                        user.save()
-                        user.userprofile.city = city
-                        user.save()
-                        user = authenticate(username=username.capitalize(), password=password)
-                        login(request, user)
-                        succesText = 'Vous êtes connecté ! Veuillez compléter votre profil !'
-                        loginSuccess = True
-                        error = False
-                        userName = request.user
-                        composeForm = ComposeMessage()
-                        searchForm = SearchPeople()
-                        return render(request, 'website/templates/index.html', locals())
-                    except:
-                        errorText = "Le nom de ville entrée n'a pas été trouvé"
+                if len(password) >= 8:
+                    if bool(re.search(r'\d', password)) is True:
+                        # check if the email form is correct
+                        if bool(re.search(r'[^@]+@[^@]+\.[^@]+', email)) is True:
+                            # Check if the username doesn't already exist in the database
+                            if not User.objects.filter(username=username).exists():
+                                try:
+                                    try:
+                                        cityParse, postCodeParse = cityInput.split(" ")
+                                        print(cityParse)
+                                        print(postCodeParse)
+                                        city = City.objects.get(cityName=cityParse.upper())
+                                    except:
+                                        city = City.objects.get(cityName=cityInput.upper())
+                                        print(city)
+                                        
+                                except:
+                                    errorText = "Le nom de ville entrée n'a pas été trouvé"
+                                    error = True
+                                    subscribeForm = createUser()
+                                    loginForm = loginUser()
+                                    return render(request, 'website/templates/index.html', locals())
+
+                                user = User.objects.create_user(username.capitalize(), email, password)
+                                user.save()
+                                user.userprofile.city = city
+                                user.save()
+                                user = authenticate(username=username.capitalize(), password=password)
+                                login(request, user)
+                                succesText = 'Vous êtes connecté ! Veuillez compléter votre profil !'
+                                loginSuccess = True
+                                error = False
+                                userName = request.user
+                                composeForm = ComposeMessage()
+                                searchForm = SearchPeople()
+                                return render(request, 'website/templates/index.html', locals())
+                            else:
+                                errorText = "Nom d'utilisateur déja pris"
+                                error = True
+                                subscribeForm = createUser()
+                                loginForm = loginUser()
+                        else:
+                            errorText = "L'email n'est pas valide"
+                            error = True
+                            subscribeForm = createUser()
+                            loginForm = loginUser()           
+                    else:
+                        errorText = 'Le mot de passe doit contenir au moins 1 chiffre'
                         error = True
                         subscribeForm = createUser()
-                        loginForm = loginUser()
-
+                        loginForm = loginUser()           
                 else:
-                    errorText = "Nom d'utilisateur déja pris"
+                    errorText = 'Le mot de passe est trop court, il doit faire au minimum 8 caractères et contenir au moins 1 chiffre'
                     error = True
                     subscribeForm = createUser()
-                    loginForm = loginUser()
+                    loginForm = loginUser()           
             else:
                 errorText = 'Les mots de passe ne correspondent pas'
                 error = True

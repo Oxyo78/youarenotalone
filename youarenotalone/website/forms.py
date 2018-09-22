@@ -31,10 +31,12 @@ class createUser(forms.Form):
                                max_length=30,
                                widget=forms.TextInput(
                                    attrs={
-                                       'class': 'form-control',
-                                       'id': 'usernameInput',
-                                       'value': '',
-                                       'placeholder': 'ex: Paul01'
+                                        'class': 'form-control',
+                                        'id': 'usernameInput',
+                                        'value': '',
+                                        'placeholder': 'ex: Paul01',
+                                        'title': "La première lettre de votre nom d'utilisateur sera automatiquement en masjuscule",
+                                        'data-toggle': 'tooltip'
                                    }
                                ))
     email = forms.CharField(label="Email",
@@ -55,7 +57,9 @@ class createUser(forms.Form):
                                     'class': 'form-control',
                                     'id': 'cityInput',
                                     'placeholder': 'ex: Paris',
-                                    'value': ''
+                                    'value': '',
+                                    'title': 'Actuellement, seul les villes de France sont disponible',
+                                    'data-toggle': 'tooltip'
                                 }
                             ))
 
@@ -66,7 +70,9 @@ class createUser(forms.Form):
                                        'id': 'passwordInput',
                                        'value': '',
                                        'placeholder': 'Mot de passe',
-                                       'autocomplete': 'off'
+                                       'autocomplete': 'off',
+                                        'title': 'Votre mot de passe doit comporter au minimum 8 caractères et contenir au moins 1 chiffre',
+                                        'data-toggle': 'tooltip'
                                    }
                                ))
     password2 = forms.CharField(label="Répétez le mot de passe",
@@ -76,7 +82,9 @@ class createUser(forms.Form):
                                         'id': 'password2Input',
                                         'value': '',
                                         'placeholder': 'Répétez le mot de passe',
-                                        'autocomplete': 'off'
+                                        'autocomplete': 'off',
+                                        'title': 'Votre mot de passe doit comporter au minimum 8 caractères et contenir au moins 1 chiffre',
+                                        'data-toggle': 'tooltip'
                                     }
                                 ))
 
