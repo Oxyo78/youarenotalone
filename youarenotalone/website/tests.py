@@ -65,44 +65,41 @@ class FirstSeleniumTests(StaticLiveServerTestCase):
         """ Login & disconnect user """
         timeout = 2
         self.selenium.get('%s%s' % (self.live_server_url, ''))
-        self.selenium.find_element_by_id('login').click()
+        self.selenium.find_element_by_id('login-nav').click()
         username_input = self.selenium.find_element_by_id("usernameInputControl")
         username_input.send_keys('Paul')
         password_input = self.selenium.find_element_by_id("passwordControl")
         password_input.send_keys('azerty')
         self.selenium.find_element_by_id('connect').click()
         WebDriverWait(self.selenium, timeout).until(
-            lambda driver: driver.find_element_by_id('account'))
-        self.selenium.find_element_by_id('logout').click()
+            lambda driver: driver.find_element_by_id('account-nav'))
+        self.selenium.find_element_by_id('logout-nav').click()
 
     def test_create_user(self):
         """ Create user """
         timeout = 2
         self.selenium.get('%s%s' % (self.live_server_url, ''))
-        self.selenium.find_element_by_id('signin').click()
+        self.selenium.find_element_by_id('signin-nav').click()
         username_input = self.selenium.find_element_by_id("usernameInput")
         username_input.send_keys('Paul02')
         password_input = self.selenium.find_element_by_id("emailInput")
         password_input.send_keys('paul@example.com')
-        selectInput = self.selenium.find_element_by_id("citySelect")
-        for option in selectInput.find_elements_by_tag_name('AAST'):
-            if option.text == 'AAST':
-                option.click() # select() in earlier versions of webdriver
-                break
+        city_input = self.selenium.find_element_by_id("cityInput")
+        city_input.send_keys('AAST')
         password_input = self.selenium.find_element_by_id("passwordInput")
-        password_input.send_keys('azerty')
+        password_input.send_keys('azertyu7')
         password_input = self.selenium.find_element_by_id("password2Input")
-        password_input.send_keys('azerty')
+        password_input.send_keys('azertyu7')
         self.selenium.find_element_by_id('subscribebutton').click()
-        self.selenium.find_element_by_id('logout').click()
+        self.selenium.find_element_by_id('logout-nav').click()
 
         """ Login with the new account """
-        self.selenium.find_element_by_id('login').click()
+        self.selenium.find_element_by_id('login-nav').click()
         username_input = self.selenium.find_element_by_id("usernameInputControl")
         username_input.send_keys('Paul02')
         password_input = self.selenium.find_element_by_id("passwordControl")
-        password_input.send_keys('azerty')
+        password_input.send_keys('azertyu7')
         self.selenium.find_element_by_id('connect').click()
         WebDriverWait(self.selenium, timeout).until(
-            lambda driver: driver.find_element_by_id('account'))
-        self.selenium.find_element_by_id('logout').click()
+            lambda driver: driver.find_element_by_id('account-nav'))
+        self.selenium.find_element_by_id('logout-nav').click()
