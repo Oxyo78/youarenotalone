@@ -99,5 +99,7 @@ crossorigin=""></script>
     {% endfor %}
   </div>
 </section>
-
+{% if user.is_authenticated %}
+<script src="{% static 'website/js/map.js' %}"></script>
+{% endif %}
 {% endblock %}
