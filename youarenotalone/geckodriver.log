@@ -741,3 +741,38 @@ JavaScript error: http://localhost:46763/static/website/js/creative.min.js, line
 JavaScript error: http://localhost:46763/static/website/js/base.js, line 15: ReferenceError: mymap is not defined
 [Parent 1107, Gecko_IOThread] WARNING: pipe error (75): Connection reset by peer: file /build/firefox-SAtaq0/firefox-61.0.1+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1537643511501	geckodriver	INFO	geckodriver 0.21.0
+1537643511514	geckodriver	INFO	Listening on 127.0.0.1:49235
+1537643512513	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.9wNMHCUlGQF4"
+1537643515706	Marionette	INFO	Listening on port 43281
+1537643515773	Marionette	WARN	TLS certificate errors will be ignored for this session
+1537643515852	Marionette	DEBUG	[2147483649] Frame script loaded
+1537643515858	Marionette	DEBUG	[2147483649] Frame script registered
+1537643515973	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1537643516051	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript error: resource://activity-stream/lib/TopSitesFeed.jsm, line 93: TypeError: setting getter-only property "_currentSearchHostname"
+JavaScript error: http://localhost:52599/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1537643520027	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:52599/
+1537643520418	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:52599/
+1537643520713	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1537643526341	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:52599/
+1537643526382	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:52599/
+1537643526393	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:52599/
+JavaScript error: http://localhost:52599/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1537643526639	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:52599/
+1537643526646	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:52599/
+1537643526960	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1537643527109	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:52599/
+1537643527305	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:52599/
+1537643527314	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:52599/
+JavaScript error: http://localhost:52599/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1537643527624	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:52599/
+1537643530784	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:52599/
+1537643530891	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:52599/
+1537643530981	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:52599/
+1537643530985	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:52599/
+JavaScript error: http://localhost:52599/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1537643531219	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:52599/
+1537643531225	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:52599/
+1537643531715	Marionette	INFO	Stopped listening on port 43281
+[Parent 4143, Gecko_IOThread] WARNING: pipe error (69): Connection reset by peer: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353

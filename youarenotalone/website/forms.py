@@ -34,7 +34,7 @@ class createUser(forms.Form):
                                        'class': 'form-control',
                                        'id': 'usernameInput',
                                        'value': '',
-                                       'placeholder': 'ex: Paul01',
+                                       'placeholder': 'ex: Paul01'
                                    }
                                ))
     email = forms.CharField(label="Email",
@@ -44,22 +44,21 @@ class createUser(forms.Form):
                                     'class': 'form-control',
                                     'id': 'emailInput',
                                     'value': '',
-                                    'placeholder': 'ex: paul@example.com',
+                                    'placeholder': 'ex: paul@example.com'
                                 }
                             ))
 
-    def getCity():
-        return City.objects.values_list('id', 'cityName').order_by('cityName')
-        # return City.objects.values_list('id', 'cityName').order_by('cityName').distinct('cityName') => Doesn't work with sqlite3
-
-    city = forms.ChoiceField(label="Ville ",
-                            widget=forms.Select(
+    city = forms.CharField(label="Ville",
+                            max_length=46,
+                            widget=forms.TextInput(
                                 attrs={
                                     'class': 'form-control',
-                                    'id': 'citySelect'
-                                }),
-                            choices=getCity
-                            )
+                                    'id': 'cityInput',
+                                    'placeholder': 'ex: Paris',
+                                    'value': ''
+                                }
+                            ))
+
     password = forms.CharField(label="Mot de passe",
                                widget=forms.PasswordInput(
                                    attrs={
@@ -67,6 +66,7 @@ class createUser(forms.Form):
                                        'id': 'passwordInput',
                                        'value': '',
                                        'placeholder': 'Mot de passe',
+                                       'autocomplete': 'off'
                                    }
                                ))
     password2 = forms.CharField(label="Répétez le mot de passe",
@@ -76,6 +76,7 @@ class createUser(forms.Form):
                                         'id': 'password2Input',
                                         'value': '',
                                         'placeholder': 'Répétez le mot de passe',
+                                        'autocomplete': 'off'
                                     }
                                 ))
 

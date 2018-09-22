@@ -64,20 +64,31 @@ def index(request):
             if password == password2:
                 # Check if the username doesn't already exist in the database
                 if not User.objects.filter(username=username).exists():
-                    city = City.objects.get(id=cityInput)
-                    user = User.objects.create_user(username, email, password)
-                    user.save()
-                    user.userprofile.city = city
-                    user.save()
-                    user = authenticate(username=username, password=password)
-                    login(request, user)
-                    succesText = 'Vous êtes connecté ! Veuillez compléter votre profil !'
-                    loginSuccess = True
-                    error = False
-                    userName = request.user
-                    composeForm = ComposeMessage()
-                    searchForm = SearchPeople()
-                    return render(request, 'website/templates/index.html', locals())
+                    try:
+                        cityParse, postCodeParse = cityInput.split(" ")
+                        print(cityParse)
+                        print(postCodeParse)
+                        city = City.objects.get(cityName=cityParse.upper())
+                        print(city)
+                        user = User.objects.create_user(username.capitalize(), email, password)
+                        user.save()
+                        user.userprofile.city = city
+                        user.save()
+                        user = authenticate(username=username.capitalize(), password=password)
+                        login(request, user)
+                        succesText = 'Vous êtes connecté ! Veuillez compléter votre profil !'
+                        loginSuccess = True
+                        error = False
+                        userName = request.user
+                        composeForm = ComposeMessage()
+                        searchForm = SearchPeople()
+                        return render(request, 'website/templates/index.html', locals())
+                    except:
+                        errorText = "Le nom de ville entrée n'a pas été trouvé"
+                        error = True
+                        subscribeForm = createUser()
+                        loginForm = loginUser()
+
                 else:
                     errorText = "Nom d'utilisateur déja pris"
                     error = True
@@ -280,3 +291,17 @@ def legalize(request):
             unreadMessage = None
 
     return render(request, 'website/templates/legal.html', locals())
+
+def completeCity(request):
+    """Auto-complete views in Ajax for the city"""
+    if request.is_ajax():
+        cityEntry = request.GET.get('term')
+        print("Entry:" + str(cityEntry))
+        data = []
+        cityList = City.objects.filter(cityName__istartswith=cityEntry).order_by('cityName')[:5]
+        for item in cityList:
+            data.append(item.cityName +" "+ str(item.postalCode))
+        if not data:
+            data.append("Aucun résultat")
+        print("Result: " + str(data))
+    return JsonResponse(data, safe=False)

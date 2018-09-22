@@ -102,4 +102,7 @@ crossorigin=""></script>
 {% if user.is_authenticated %}
 <script src="{% static 'website/js/map.js' %}"></script>
 {% endif %}
+{% if not user.is_authenticated %}
+<script src="{% static 'website/js/autocomplete.js' %}"></script>
+{% endif %}
 {% endblock %}

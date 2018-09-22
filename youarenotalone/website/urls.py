@@ -13,4 +13,5 @@ urlpatterns = [
     path('search/', views.searchUsers, name='search'),
     path('newMessage/', views.newMessage, name='newMessage'),
     path('legal/', views.legalize, name='legalize'),
+    path('complete-city/', views.completeCity, name='cityComplete'),
 ]

@@ -34,6 +34,10 @@
     <!-- Plugin JavaScript -->
     <script src="{% static 'website/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
     <script src="{% static 'website/vendor/scrollreveal/scrollreveal.min.js' %}"></script>
+
+    <!-- JqueryUi -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     {% block head %}{% endblock %}
   </head>
   
@@ -59,20 +63,20 @@
             </li>
             {% if not user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" id="login" data-toggle="modal" data-target="#loginModal">Connexion</a>
+              <a class="nav-link js-scroll-trigger" id="login-nav" data-toggle="modal" data-target="#loginModal">Connexion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" id="signin" data-toggle="modal" data-target="#subscribeModal">inscription</a>
+              <a class="nav-link js-scroll-trigger" id="signin-nav" data-toggle="modal" data-target="#subscribeModal">inscription</a>
             </li>
             {% else %}
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" id="account" href="{% url 'account' %}">Mon compte</a>
+                <a class="nav-link js-scroll-trigger" id="account-nav" href="{% url 'account' %}">Mon compte</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" id="message" href="{% url 'message' %}">Mes messages {% if unreadMessage %}({{ unreadMessage }}){% endif %}</a>
+                <a class="nav-link js-scroll-trigger" id="message-nav" href="{% url 'message' %}">Mes messages {% if unreadMessage %}({{ unreadMessage }}){% endif %}</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'logout' %}" id="logout">Deconnexion</a>
+                <a class="nav-link" href="{% url 'logout' %}" id="logout-nav">Deconnexion</a>
               </li>
             {% endif %}
           </ul>

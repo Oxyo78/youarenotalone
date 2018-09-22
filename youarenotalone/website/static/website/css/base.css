@@ -44,6 +44,10 @@ body {
     color: rgb(80, 69, 56);
 }
 
+ul.ui-autocomplete {
+    z-index: 1100;
+}
+
 @media (max-width: 425px) {
     .table {
         font-size: 75%;
