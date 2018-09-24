@@ -71,7 +71,7 @@ class createUser(forms.Form):
                                        'value': '',
                                        'placeholder': 'Mot de passe',
                                        'autocomplete': 'off',
-                                        'title': 'Votre mot de passe doit comporter au minimum 8 caractères et contenir au moins 1 chiffre',
+                                        'title': 'Votre mot de passe doit comporter au minimum 8 caractères et contenir au moins 1 chiffre et 1 lettre',
                                         'data-toggle': 'tooltip'
                                    }
                                ))

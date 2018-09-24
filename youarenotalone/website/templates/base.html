@@ -86,13 +86,13 @@
       <!-- Alert message -->
       <div id="alertMessage">
         {% if error %}
-        <div class="alert alert-warning fixed-top text-center">
+        <div class="alert alert-warning fixed-top text-center" id="errorAlert">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
           <strong>{{ errorText}}</strong>
         </div>
         {% endif %}
         {% if loginSuccess %}
-        <div class="alert alert-success fixed-top text-center">
+        <div class="alert alert-success fixed-top text-center" id="succesAlert">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
           <strong>{{ succesText }}</strong>
         </div>
