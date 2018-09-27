@@ -24,7 +24,7 @@ SECRET_KEY = '&q(x@dx1708+$2hkz4(9hjnt0vkjp4kt(z%9!*i)6xj08^nbla'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 SESSION_COOKIE_AGE = 600
 # Application definition
@@ -134,3 +134,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django_messages.context_processors.inbox',
 )
+
+LOGIN_URL = 'home'
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True

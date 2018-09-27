@@ -1,10 +1,4 @@
-$(document).ready(function () {
-    var liste = [
-        "abc hola !",
-        "acb",
-        "def"
-    ];
-    
+$(document).ready(function () {   
     $("#cityInput").autocomplete({
         source : "complete-city/",
         minLength : 1,    

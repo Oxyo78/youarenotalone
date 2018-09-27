@@ -2,6 +2,9 @@ body {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
 }
 
+#cookiesModal {
+}
+
 /* Search button */
 #searchInput {
     border-radius: 10px 0 0 10px;

@@ -21,12 +21,6 @@ $(document).ready(function () {
                     else {
                         $('#noResult').empty();
                         $('#mapid').css('display', 'block');
-                        // Add scrolling to map
-                        // var target = $( "#mapid" );
-                        // target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                        // $('#mapid').animate({
-                        //     scrollTop: (target.offset().top - 56)
-                        //   }, 1000, "easeInOutExpo");
 
                         //Delete old markers
                         if (markerList != undefined) {

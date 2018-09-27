@@ -14,9 +14,15 @@ from django.core import serializers
 
 def index(request):
     """ Home page render """
-    error = False
-    errorText = ''
-    succesText = ''
+
+    # Check for modal rgpd
+    if request.session.get('rgpd'):
+        cookiesAccept = False
+        print('False')
+    else:
+        cookiesAccept = True
+        print('True')
+
 
     # Get the last 3 news from the database
     news = News.objects.all().order_by('id')[:3]
@@ -347,3 +353,10 @@ def completeCity(request):
             data.append("Aucun résultat")
         print("Result: " + str(data))
     return JsonResponse(data, safe=False)
+
+def acceptCookies(request):
+    """ Set time for accepting cookies """
+    if request.is_ajax():
+        setCookieAccept = request.GET.get('setCookieAccept')
+        request.session['rgpd'] = 'True'
+        return redirect(reverse(index))

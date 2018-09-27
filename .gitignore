@@ -4,3 +4,4 @@ __pycache__/
 .env/
 youarenotalone/settings/production.py
 youarenotalone/staticfiles/
+youarenotalone/geckodriver.log

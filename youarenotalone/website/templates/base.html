@@ -41,6 +41,10 @@
     {% block head %}{% endblock %}
   </head>
   
+  <script>
+      var cookies = {{cookiesAccept|yesno:"true,false"}};
+  </script>
+
   <body id="page-top">
 
     <!-- Navigation -->
@@ -100,31 +104,47 @@
       </div>
     </nav>
 
-    <!-- Modal connexion -->
-    <div class="modal fade text-uppercase" id="loginModal" role="dialog">
+    {% if cookiesAccept is True %}
+    <!-- Modal cookie accept -->
+    <div class="modal fade" id="cookiesModal" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title">Connexion</h4>
-          </div>
           <div class="modal-body">
-              <form class="loginForm" method="post">
-                  {% csrf_token %}
-                  {{ loginForm.as_p }}
-                  <div class="row">
-                    <div class="modalButton">
-                      <button type="submit" class="btn btn-default" id="connect">Se connecter</button>
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Quitter</button>
-                    </div>
-                  </div>
-              </form>
-          </div>
-          <div class="modal-footer">
-            <a id="subscribeLink" data-toggle="modal" data-target="#subscribeModal" href="#">inscription</a>
+            <p>Ce site utilise des cookies pour le confort des utilisateurs, en cliquant sur j'accepte,
+              vous autorisez ce site à stocker des informations sur votre expérience utilisateur.
+              Pour en savoir plus vous pouvez lire les <a href="{% url 'legalize' %}">Mentions légales.</a></p>
+              <button type="button" class="btn btn-default" id="cookiesButton" data-dismiss="modal">J'accepte</button>
           </div>
         </div>        
       </div>
     </div>
+    {% endif %}
+
+    <!-- Modal connexion -->
+      <div class="modal fade text-uppercase" id="loginModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Connexion</h4>
+            </div>
+            <div class="modal-body">
+                <form class="loginForm" method="post">
+                    {% csrf_token %}
+                    {{ loginForm.as_p }}
+                    <div class="row">
+                      <div class="modalButton">
+                        <button type="submit" class="btn btn-default" id="connect">Se connecter</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Quitter</button>
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <a id="subscribeLink" data-toggle="modal" data-target="#subscribeModal" href="#">inscription</a>
+            </div>
+          </div>        
+        </div>
+      </div>
     
     {% if not user.is_authenticated %}
     <!-- Modal subscribe -->
