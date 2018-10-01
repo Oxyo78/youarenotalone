@@ -18,10 +18,8 @@ def index(request):
     # Check for modal rgpd
     if request.session.get('rgpd'):
         cookiesAccept = False
-        print('False')
     else:
         cookiesAccept = True
-        print('True')
 
 
     # Get the last 3 news from the database
@@ -247,7 +245,6 @@ def account(request):
             getInterest = Interest.objects.get(id=interestSelect)
             user.userprofile.interestId.add(getInterest)
             if interestInput:
-                print('aa')
                 obj, newInterest = Interest.objects.get_or_create(interestName = interestInput.capitalize())
                 user.userprofile.interestId.add(obj.id)
                 user.save()
@@ -278,7 +275,6 @@ def account(request):
 def searchUsers(request):
     """ Get a list of user with same interest """
     searchInterest = request.GET.get('searchInterest')
-    print("search: " +searchInterest)
     user = request.user
     data = {}
     try:
@@ -296,7 +292,6 @@ def searchUsers(request):
     if not data:
         data['noResult'] = 'No results found'
 
-    print("data: "+str(data))
     return JsonResponse(data)
 
 
@@ -319,10 +314,8 @@ def newMessage(request):
         msg.save()
         data['succesText'] = 'Message envoyé'
         data['loginSuccess'] = 'True'
-        print("data: "+str(data))
 
     except ValueError as e:
-        print('erreur: ', e)
         data['error'] = e
         
     return JsonResponse(data)
@@ -344,14 +337,12 @@ def completeCity(request):
     """Auto-complete views in Ajax for the city"""
     if request.is_ajax():
         cityEntry = request.GET.get('term')
-        print("Entry:" + str(cityEntry))
         data = []
         cityList = City.objects.filter(cityName__istartswith=cityEntry).order_by('cityName')[:5]
         for item in cityList:
             data.append(item.cityName +" "+ str(item.postalCode))
         if not data:
             data.append("Aucun résultat")
-        print("Result: " + str(data))
     return JsonResponse(data, safe=False)
 
 def acceptCookies(request):

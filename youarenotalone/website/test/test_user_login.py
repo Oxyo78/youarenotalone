@@ -8,7 +8,7 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 
 
 
-class FirstSeleniumTests(StaticLiveServerTestCase):
+class UserSeleniumTests(StaticLiveServerTestCase):
     """ Try connexion and logout of a user """
     fixtures = ['city.json', 'interest.json', 'user.json']
 

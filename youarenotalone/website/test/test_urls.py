@@ -59,11 +59,3 @@ class UrlTestCase(TestCase):
     def test_view_message(self):
         self.client.login(username='Paul', password='azerty')
         message = self.client.get('/messages/')
-        print(message.content)
-
-
-    def test_message_inbox(self):
-        pass
-
-    def test_account_form(self):
-        pass
