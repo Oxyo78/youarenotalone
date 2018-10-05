@@ -330,8 +330,6 @@ def legalize(request):
         unreadMessage = inbox_count_for(userName)
         if unreadMessage == 0:
             unreadMessage = None
-    loginForm = loginUser()
-    subscribeForm = createUser()
 
     return render(request, 'website/templates/legal.html', locals())
 
