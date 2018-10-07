@@ -8,7 +8,7 @@ $(document).ready(function () {
     $('#mapid').css('display', 'none');
     
     // Alert hide after 3s
-    setTimeout(function () { $(".alert").fadeOut('normal'); }, 3000);
+    setTimeout(function () { $(".alert").fadeOut('normal'); }, 5000);
     
     if (cookies == true){
         window.setTimeout(function () {$('#cookiesModal').modal("show"); }, 3000 );

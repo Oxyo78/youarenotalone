@@ -2,7 +2,7 @@ import re
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-from .forms import loginUser, createUser, MessageReply, SearchPeople, ComposeMessage, InterestAdd, InterestDel
+from .forms import loginUser, createUser, MessageReply, SearchPeople, ComposeMessage, InterestAdd, InterestDel, EditTheProfile, DeleteAccount
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db.models.query import QuerySet
@@ -11,6 +11,8 @@ from django.utils import timezone
 from django.http import Http404, HttpResponse, JsonResponse
 from .models import Interest, UserProfile, City, News
 from django.core import serializers
+from django.contrib.auth.password_validation import validate_password, ValidationError
+from django.contrib.auth.hashers import check_password
 
 def index(request):
     """ Home page render """
@@ -159,7 +161,7 @@ def index(request):
 
 
 @login_required
-def logoutUser(request):
+def logoutUser(request, errorText=None, error=False):
     """ Logout user """
     logout(request)
     return redirect(reverse(index))
@@ -250,10 +252,14 @@ def account(request):
                 user.save()
                 interestForm = InterestAdd()
                 delForm = InterestDel(user=user)
+                editForm = EditTheProfile()
+                deleteAccountForm = DeleteAccount()
                 return render(request, 'website/templates/account.html', locals())
             else:
                 interestForm = InterestAdd()
                 delForm = InterestDel(user=user)
+                editForm = EditTheProfile()
+                deleteAccountForm = DeleteAccount()
                 return render(request, 'website/templates/account.html', locals())
         
         delForm = InterestDel(request.POST, user=user)
@@ -264,10 +270,126 @@ def account(request):
             user.save()
             interestForm = InterestAdd()
             delForm = InterestDel(user=user)
+            editForm = EditTheProfile()
+            deleteAccountForm = DeleteAccount()
             return render(request, 'website/templates/account.html', locals())
+        
+        editProfileForm = EditTheProfile(request.POST)
+        if editProfileForm.is_valid():
+            newEmail = editProfileForm.cleaned_data['email']
+            newCity = editProfileForm.cleaned_data['city']
+            newPassword = editProfileForm.cleaned_data['password']
+            newPassword2 = editProfileForm.cleaned_data['password2']
+            if newEmail:
+                if bool(re.search(r'[^@]+@[^@]+\.[^@]+', newEmail)) is True:
+                    if not User.objects.filter(email=newEmail).exists():
+                        user.email = newEmail
+                        user.save()
+                        succesText = "L'email a était modifié" 
+                        loginSuccess = True
+                    else:
+                        errorText = "Un compte utilise déjà cette email"
+                        error = True
+                        subscribeForm = createUser()
+                        loginForm = loginUser()
+                        editForm = EditTheProfile()
+                        deleteAccountForm = DeleteAccount()
+                else:
+                    errorText = "L'email n'est pas valide"
+                    error = True
+                    subscribeForm = createUser()
+                    loginForm = loginUser()
+                    editForm = EditTheProfile()
+                    deleteAccountForm = DeleteAccount()
+
+            if newCity:
+                try:
+                    city = newCity.split(" ")
+                    print(city)
+                    if len(city) > 2:
+                        name = str(city[0]) + " " + str(city[1])
+                        print("name: " + str(name))
+                        cityQuery = City.objects.filter(cityName__istartswith=name.upper())[:1]
+                        cityWord = cityQuery[0]
+                    else:
+                        cityQuery = City.objects.filter(cityName__istartswith=city[0].upper())[:1]
+                        cityWord = cityQuery[0]
+                    user.userprofile.city = cityWord
+                    user.save()
+                    succesText = "Le nom de ville a était changé" 
+                    loginSuccess = True
+
+                except:
+                    errorText = "Le nom de ville entrée n'a pas été trouvé"
+                    error = True
+                    subscribeForm = createUser()
+                    loginForm = loginUser()
+                    editForm = EditTheProfile()
+                    deleteAccountForm = DeleteAccount()
+
+            if newPassword:
+                try:
+                    validate_password(newPassword, user)
+                    if check_password(newPassword, user.password) is False:
+                        if newPassword == newPassword2:
+                            # Check if newPassword contain a number
+                            if bool(re.search(r'\d', newPassword)) is True:
+                                # Check if newPassword contain a letter
+                                if bool(re.search(r'[a-zA-Z]', newPassword)) is True:
+                                    user.set_password(newPassword)
+                                    user.save()
+                                    succesText = "Le mots de passe a été changé" 
+                                    loginSuccess = True
+                                else:
+                                    errorText = "Le mot de passe doit contenir au moins 1 lettre"
+                                    error = True
+                                    subscribeForm = createUser()
+                                    loginForm = loginUser()           
+                            else:
+                                errorText = 'Le mot de passe doit contenir au moins 1 chiffre'
+                                error = True
+                                subscribeForm = createUser()
+                                loginForm = loginUser()           
+                        else:
+                            errorText = 'Les mots de passe ne correspondent pas'
+                            error = True
+                            subscribeForm = createUser()
+                            loginForm = loginUser()           
+                    else:
+                        errorText = 'Le mots de passe correspond au mots de passe actuelle'
+                        error = True
+                        subscribeForm = createUser()
+                        loginForm = loginUser()           
+                except ValidationError as e:
+                    print(' '.join(e))
+                    errorText = ' '.join(e)
+                    error = True
+                    subscribeForm = createUser()
+                    loginForm = loginUser()           
+                
+            interestForm = InterestAdd()
+            delForm = InterestDel(user=user)
+            editForm = EditTheProfile()
+            deleteAccountForm = DeleteAccount()
+
+        deleteAccount = DeleteAccount(request.POST)
+        if deleteAccount.is_valid():
+            confirmAnswer = deleteAccount.cleaned_data['yesConfirm']
+            if confirmAnswer == "OUI":
+                user.delete()
+                errorText = "Votre compte a été supprimer"
+                error = True               
+                # return redirect(reverse(logoutUser))
+                return logoutUser(request,errorText, error)
+            else:
+                errorText = 'Vous devez tapez OUI en majuscule pour confirmer'
+                error = True
+
     else:
         addForm = InterestAdd()
         delForm = InterestDel(user=user)
+        editForm = EditTheProfile()
+        deleteAccountForm = DeleteAccount()
 
     return render(request, 'website/templates/account.html', locals())
 

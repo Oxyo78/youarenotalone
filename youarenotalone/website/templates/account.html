@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% load static %} {% block content %}
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
 
 <section class="bg-primary" id="account">
     <div class="row">
@@ -22,13 +24,22 @@
                         <dd>{{ user.userprofile.city }}</dd>
                         <dt>Coordonnée géographique:</dt>
                         <dd>{{ user.userprofile.city.coordinateLng }} / {{ user.userprofile.city.coordinateLat }}</dd>
-                        <dt>Intérêt:</dt><input type="button" class="btn btn-default" id="interestbutton" data-toggle="modal" data-target="#interestModal" value="Rajouter/Supprimer un intérêt">
+                        <dt>Intérêt:</dt>
                         {% for interest in interestList %}
                         <dd>{{ interest }}</dd>
                         {% endfor %}
                     </dl>
+                  </div>
                 </div>
-            </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="container my-auto text-center">
+                      <input type="button" class="btn btn-default btn-sm" style="margin: 10px" id="interestbutton" data-toggle="modal" data-target="#interestModal" value="Rajouter/Supprimer un intérêt">
+                      <input type="button" class="btn btn-default btn-sm" style="margin: 10px" id="editButton" data-toggle="modal" data-target="#editModal" value="Modifier mon profil">
+                      <input type="button" class="btn btn-danger btn-sm" style="margin: 10px" id="deleteAccountbutton" data-toggle="modal" data-target="#deleteModal" value="Supprimer mon compte">
+                    </div>
+                  </div>
+                </div>
         </div>
     </div>
     <div class="modal fade text-uppercase" id="interestModal" role="dialog">
@@ -43,7 +54,7 @@
                 {{ addForm.as_p }}
                 <div class="row">
                   <div class="modalButton">
-                    <button type="submit" class="btn btn-default" id="composeButton">Rajouter</button>
+                    <button type="submit" class="btn btn-default" id="addButton">Rajouter</button>
                   </div>
                 </div>
               </form>
@@ -53,7 +64,52 @@
                 {{ delForm.as_p }}
                 <div class="row">
                   <div class="modalButton">
-                    <button type="submit" class="btn btn-default" id="composeButton">Supprimer</button>
+                    <button type="submit" class="btn btn-default" id="deleteButton">Supprimer</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="modal fade text-uppercase" id="editModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Modifier mon profil</h3>
+            </div>
+            <div class="modal-body">
+              <form class="editForm" method="POST">
+                {% csrf_token %}
+                {{ editForm.as_p }}
+                <div class="row">
+                  <div class="modalButton">
+                    <button type="submit" class="btn btn-default" id="saveButton">Enregistrer les modifications</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade text-uppercase" id="deleteModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Supprimer le compte</h3>
+            </div>
+            <div class="modal-body">
+              <p>Voulez vous supprimer votre compte ?</p>
+              <p>Attention, cette opération est définitive !</p>
+              <form class="deleteForm" method="POST">
+                {% csrf_token %}
+                {{ deleteAccountForm.as_p }}
+                <div class="row">
+                  <div class="modalButton">
+                    <div class="container my-auto text-center">
+                      <button type="submit" class="btn btn-success" id="stayButton" data-dismiss="modal">Rester :)</button>
+                      <button type="submit" class="btn btn-danger" id="killButton">Supprimer :(</button>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -62,5 +118,7 @@
         </div>
       </div>
 </section>
-
+{% endblock %}
+{% block script %}
+<script src="{% static 'website/js/autocomplete.js' %}"></script>
 {% endblock %}

@@ -28,15 +28,13 @@ class NavigationOffSeleniumTests(StaticLiveServerTestCase):
         self.selenium.get('%s%s' % (self.live_server_url, ''))
         a = WebDriverWait(self.selenium, 6).until(
             EC.element_to_be_clickable((By.ID, 'cookiesButton')))
-            # lambda driver: driver.find_element_by_("cookiesModal"))
         self.selenium.find_element_by_id('cookiesButton').click()
 
     def test_news_link(self):
         """ Home page link """
         self.selenium.get('%s%s' % (self.live_server_url, ''))
         self.selenium.find_element_by_id('news-nav').click()
-        news_position = self.selenium.find_element_by_id("services")
-        self.assertEqual(news_position.location, {'x': 0, 'y': 1386})
+        self.selenium.find_element_by_id("services")
 
     def test_youarenotalone_link(self):
         """ Test the title link back home """
