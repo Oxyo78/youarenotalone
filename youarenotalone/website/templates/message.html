@@ -8,7 +8,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Expéditeur</th>
+                        <th scope="col" class="senderMessage">Expéditeur</th>
                         <th scope="col" class="inboxDetail">Objet</th>
                         <th scope="col" class="inboxDetail">Recu le</th>
                         <th scope="col" class="inboxDetail">Action</th>
@@ -17,12 +17,12 @@
                 <tbody>
                     {% for message in message_list %}
                     <tr>
-                        <td>{{ message.sender }}</td>
+                        <td class="senderMessage">{{ message.sender }}</td>
                         <td class="listMessage">
                             {% if message.new %}<strong>{% endif %} {% if message.replied %}<em>{% endif %}
-                                    <a href="{% url 'view_message' message.id %}#messageTag" class="js-scroll-trigger">{{ message.subject|truncatewords:3 }} {% if message.new %}(New){% endif %}</a>
+                                    <a href="{% url 'view_message' message.id %}#messageTag" class="js-scroll-trigger">{{ message.subject|truncatewords:4 }} {% if message.new %}(New){% endif %}</a>
                                     {% if message.replied %}</em>{% endif %} {% if message.new %}</strong>{% endif %}</td>
-                        <td class="listMessage">{{ message.sent_at|date:_("DATETIME_FORMAT") }}</td>
+                        <td class="listMessage">{{ message.sent_at|date:_("j/m/y  G:i") }}</td>
                         <td class="listMessage"><a href="{% url 'messages_delete' message.id %}">Supprimer</a></td>
                     </tr>
                     {% endfor %}

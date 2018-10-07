@@ -68,6 +68,14 @@ ul.ui-autocomplete {
     .table th {
         padding: 0px;
     }
+
+    .senderMessage {
+       display: None; 
+    }
+
+    .table td {
+        padding-left: 0;
+    }
 }
 
 /* Message detail */
