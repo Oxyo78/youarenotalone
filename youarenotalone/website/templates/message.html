@@ -4,6 +4,7 @@
     <div class="container my-auto">
         <div class="text-uppercase">
             <h3>Messagerie</h3>
+            <br>
             {% if message_list %}
             <table class="table">
                 <thead>
@@ -50,7 +51,7 @@
                         <dd>{{ messageToView.sent_at|date:_("DATETIME_FORMAT")}}</dd>
                     </dl>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 backgroundColor fontColor">
                     {{ messageToView.body|linebreaksbr }}<br /><br />
                 </div>
             </div>

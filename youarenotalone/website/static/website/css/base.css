@@ -6,6 +6,16 @@ body {
     text-align:center;
 }
 
+.backgroundColor {
+    background-color: rgb(241, 182, 155);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.fontColor {
+    color: #54320a;
+}
+
 /* Search button */
 #searchInput {
     border-radius: 10px 0 0 10px;
@@ -75,6 +85,10 @@ ul.ui-autocomplete {
 
     .table td {
         padding-left: 0;
+    }
+
+    .backgroundColor {
+        margin: 10px;
     }
 }
 
