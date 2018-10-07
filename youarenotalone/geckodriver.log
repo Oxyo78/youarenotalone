@@ -9683,3 +9683,215 @@ JavaScript error: http://localhost:36343/static/website/js/creative.min.js, line
 1538761611299	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:36343/
 1538761611769	Marionette	INFO	Stopped listening on port 42377
 [Parent 7092, Gecko_IOThread] WARNING: pipe error (71): Connection reset by peer: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538899084985	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.WawAMDR6k2RD"
+1538899086885	Marionette	INFO	Listening on port 40041
+1538899086903	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538899086992	Marionette	DEBUG	[2147483649] Frame script loaded
+1538899086994	Marionette	DEBUG	[2147483649] Frame script registered
+1538899087118	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538899087159	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript error: http://localhost:49463/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899092768	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:49463/
+1538899093224	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:49463/
+1538899093706	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:49463/
+1538899093734	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:49463/
+1538899093734	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:49463/
+JavaScript error: http://localhost:49463/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899093868	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:49463/
+1538899093873	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:49463/
+1538899097809	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899098233	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:49463/
+1538899098258	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:49463/
+1538899098260	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:49463/
+JavaScript error: http://localhost:49463/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899098411	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:49463/
+1538899098414	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:49463/
+1538899098463	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:49463/
+1538899098498	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:49463/
+1538899098500	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:49463/
+JavaScript error: http://localhost:49463/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899098644	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:49463/legal/
+1538899098648	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:49463/legal/
+1538899099069	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:49463/legal/
+1538899099088	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:49463/legal/
+JavaScript error: http://localhost:49463/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899099207	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:49463/
+1538899099211	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:49463/
+1538899099465	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899099877	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:49463/
+1538899099901	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:49463/
+1538899099904	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:49463/
+JavaScript error: http://localhost:49463/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899100018	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:49463/
+1538899100021	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:49463/
+1538899100287	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899100682	Marionette	INFO	Stopped listening on port 40041
+[Parent 20821, Gecko_IOThread] WARNING: pipe error (71): Connection reset by peer: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538899101565	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.iMSABLTGJokB"
+1538899103446	Marionette	INFO	Listening on port 44221
+1538899103484	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538899103590	Marionette	DEBUG	[2147483649] Frame script loaded
+1538899103601	Marionette	DEBUG	[2147483649] Frame script registered
+1538899103712	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538899103796	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript error: resource://activity-stream/lib/TopSitesFeed.jsm, line 93: TypeError: setting getter-only property "_currentSearchHostname"
+JavaScript error: http://localhost:59363/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899107417	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59363/
+1538899107742	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59363/
+1538899108005	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899108093	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59363/
+1538899108241	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59363/
+1538899108243	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59363/
+JavaScript error: http://localhost:59363/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899108412	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59363/
+1538899108903	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59363/
+1538899112179	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899114213	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59363/
+1538899114242	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59363/
+1538899114244	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59363/
+JavaScript error: http://localhost:59363/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899114365	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59363/account/
+1538899114369	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59363/account/
+1538899114417	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59363/account/
+1538899114443	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59363/account/
+1538899114445	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59363/account/
+JavaScript error: http://localhost:59363/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899114574	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59363/messages/
+1538899114578	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59363/messages/
+1538899114644	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59363/messages/
+1538899114674	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59363/messages/
+1538899114675	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59363/messages/
+JavaScript error: http://localhost:59363/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899114770	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59363/messages/view/2/#messageTag
+1538899114787	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59363/messages/view/2/#messageTag
+1538899114908	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59363/messages/view/2/#messageTag
+1538899114943	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59363/messages/view/2/#messageTag
+1538899114944	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59363/messages/view/2/#messageTag
+JavaScript error: http://localhost:59363/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899115064	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59363/messages/view/2/#messageTag
+1538899115069	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59363/messages/view/2/#messageTag
+1538899115489	Marionette	INFO	Stopped listening on port 44221
+[Parent 21114, Gecko_IOThread] WARNING: pipe error (71): Connection reset by peer: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1538899116442	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.i9ph550VcvaL"
+1538899118310	Marionette	INFO	Listening on port 39205
+1538899118382	Marionette	WARN	TLS certificate errors will be ignored for this session
+1538899118465	Marionette	DEBUG	[2147483649] Frame script loaded
+1538899118467	Marionette	DEBUG	[2147483649] Frame script registered
+1538899118538	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1538899118589	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+JavaScript error: resource://activity-stream/lib/TopSitesFeed.jsm, line 93: TypeError: setting getter-only property "_currentSearchHostname"
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899123277	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899123610	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899123866	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899124088	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899124218	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899124220	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899124378	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899124381	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899124907	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899124931	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899124932	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899125071	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899125075	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899125334	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899125591	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899125939	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899125943	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899126140	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899126465	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899126515	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899126560	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899126562	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899126672	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899126675	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899126949	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899127043	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899127179	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899127181	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899127308	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899127388	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899127427	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899127469	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899127470	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899127580	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899127585	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899128079	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899128119	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899128119	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899128239	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899128242	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899128502	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899128585	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899128716	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899128719	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899128860	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899128879	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899128921	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899128975	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899128976	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899129109	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899129112	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899129641	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899129688	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899129688	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899129796	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899129801	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899130066	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899130291	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899130410	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899130413	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899130526	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899130528	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899131059	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899131080	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899131081	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899131206	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899131211	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899131523	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899131733	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899131855	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899131859	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899131976	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899131981	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899132499	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899132520	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899132521	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899132641	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899132644	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899132904	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899133103	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899133230	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899133234	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899133339	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899133341	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899133887	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899133907	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899133907	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899134039	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899134042	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899134290	Marionette	DEBUG	[2147483649] Canceled page load listener because no navigation has been detected
+1538899134471	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for http://localhost:59343/
+1538899134588	Marionette	DEBUG	[2147483649] Received DOM event pagehide for http://localhost:59343/
+1538899134591	Marionette	DEBUG	[2147483649] Received DOM event unload for http://localhost:59343/
+JavaScript error: http://localhost:59343/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1538899134695	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for http://localhost:59343/
+1538899134698	Marionette	DEBUG	[2147483649] Received DOM event pageshow for http://localhost:59343/
+1538899135197	Marionette	INFO	Stopped listening on port 39205
+[Parent 21399, Gecko_IOThread] WARNING: pipe error (71): Connection reset by peer: file /build/firefox-ap9sYq/firefox-62.0+linuxmint1+tara/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
