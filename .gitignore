@@ -1,7 +1,7 @@
 .vscode/
 /__pycache__/
 __pycache__/
-.env/
+/env/
 youarenotalone/settings/production.py
 youarenotalone/staticfiles/
 youarenotalone/geckodriver.log
