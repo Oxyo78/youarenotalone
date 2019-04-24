@@ -13765,3 +13765,99 @@ JavaScript error: http://localhost:50073/static/website/js/creative.min.js, line
 [Child 129[GPU 30
 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
+1556139287366	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Yohan\\AppData\\Local\\Temp\\rust_mozprofile.cveiz9J3stfh"
+1556139287649	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1556139287649	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1556139287649	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1556139288543	Marionette	INFO	Listening on port 50425
+1556139288973	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:50416/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50416/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50416/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50416/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1556139292905	Marionette	INFO	Stopped listening on port 50425
+[Child 8732, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 8732, [Parent 9924, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 14940, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 14940, Chrom[GPU 1
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1556139296652	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Yohan\\AppData\\Local\\Temp\\rust_mozprofile.9VyvMW7jT3SS"
+1556139296922	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1556139296922	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1556139296922	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1556139297820	Marionette	INFO	Listening on port 50492
+1556139298261	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:50483/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50483/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50483/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50483/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50483/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50483/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1556139306386	Marionette	INFO	Stopped listening on port 50492
+[Parent 11388, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Parent 11388, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 1404, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 1404, Chr[Parent 11388, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 1028, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 1028[GPU 816, C
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+h
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1556139309951	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Yohan\\AppData\\Local\\Temp\\rust_mozprofile.lkyuJ335pTkM"
+1556139310222	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1556139310223	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1556139310223	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1556139311121	Marionette	INFO	Listening on port 50559
+1556139311559	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:50550/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50550/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50550/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50550/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50550/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50550/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1556139315427	Marionette	INFO	Stopped listening on port 50559
+[Parent 13756, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 5648, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 5648, Ch[Parent 13756, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 4044, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 4044,[GPU 1796, Chrome_
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+1556139319253	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Yohan\\AppData\\Local\\Temp\\rust_mozprofile.zUdG80yOoIBS"
+1556139319528	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1556139319529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1556139319529	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1556139320421	Marionette	INFO	Listening on port 50627
+1556139320861	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+JavaScript error: http://localhost:50618/static/website/js/creative.min.js, line 1: TypeError: a(...).magnificPopup is not a function
+1556139332847	Marionette	INFO	Stopped listening on port 50627
+[[Child 13712, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 332
+[Child 1371[GPU 69
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
